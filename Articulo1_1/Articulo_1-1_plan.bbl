@@ -1,0 +1,94 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Ferrari \harvardand\ Cribari-Neto}{2004}{Ferrari2}
+Ferrari, S. \harvardand\ Cribari-Neto, F.  \harvardyearleft
+  2004\harvardyearright , `Beta regression for modelling rates and
+  proportions', {\em Journal of applied statistics} {\bf 31}(7),~799--815.
+
+\harvarditem{Galvis \harvardand\ Lachos}{2014}{Galvis1}
+Galvis, D. \harvardand\ Lachos, V.  \harvardyearleft 2014\harvardyearright ,
+  Bayesian analysis of regression models for proportional data in the presence
+  of zeros and ones, PhD thesis, Estatal University of Campinas.
+
+\harvarditem{Hahn}{2008}{Hahn1}
+Hahn, E.  \harvardyearleft 2008\harvardyearright , `Mixture densities for
+  project management activity times: A robust approach to pert', {\em European
+  Journal of operational research} {\bf 188}(2),~450--459.
+
+\harvarditem{Hossain}{2015}{Hossain1}
+Hossain, A.  \harvardyearleft 2015\harvardyearright , `Modelling a proportion
+  response variable using generalized additive models for location scale and
+  shape', {\em International Workshop on Statistical Modelling} {\bf
+  2},~137--140.
+
+\harvarditem{J{\o}rgensen}{1997}{Jorgensen1}
+J{\o}rgensen, B.  \harvardyearleft 1997\harvardyearright , `The theory of
+  dispersion models', {\em Computational statistics and Data analysis} {\bf
+  76}.
+
+\harvarditem{J{\o}rgensen \harvardand\ Barndorff-Nielsen}{1991}{Barndorff1}
+J{\o}rgensen, B. \harvardand\ Barndorff-Nielsen  \harvardyearleft
+  1991\harvardyearright , `Some parametric models on the simplex', {\em Journal
+  of multivariate analysis} {\bf 39}(1),~106--116.
+
+\harvarditem[Kosmidis et~al.]{Kosmidis, Zou \harvardand\
+  Jagan}{2015}{Kosmidis1}
+Kosmidis, I., Zou, A. \harvardand\ Jagan, K.  \harvardyearleft
+  2015\harvardyearright , `Beyond beta regression: modelling percentages and
+  fractions in the presence of boundary observations', {\em International
+  Workshop on Statistical Modelling} {\bf 1},~267--272.
+
+\harvarditem{Ospina \harvardand\ Ferrari}{2010}{Ospina2}
+Ospina, R. \harvardand\ Ferrari, S.  \harvardyearleft 2010\harvardyearright ,
+  `Inflated beta distributions online: doi:10.1007/s00362-008-0125-4', {\em
+  Statitical papers} .
+
+\harvarditem{Ospina \harvardand\ Ferrari}{2012}{Ospina1}
+Ospina, R. \harvardand\ Ferrari, S.  \harvardyearleft 2012\harvardyearright ,
+  `A general class of zero-or-one inflated beta regression models', {\em
+  Computational Statistics and Data Analysis} {\bf 56}(6),~1609--1623.
+
+\harvarditem{Owen}{2008}{Owen1}
+Owen, C.  \harvardyearleft 2008\harvardyearright , Parameter estimation for the
+  beta distribution, Master's thesis, Brigham young university.
+
+\harvarditem{Pace \harvardand\ Salvan}{1997}{Pace1}
+Pace, L. \harvardand\ Salvan, A.  \harvardyearleft 1997\harvardyearright ,
+  `Principles of statistical inference from a neo-fisherian perspective. in:
+  Advanced series on statistical science and applied probability', {\em World
+  Scientific} {\bf 4},~128.
+
+\harvarditem[Qiu et~al.]{Qiu, Song \harvardand\ Tan}{2008}{Qiu1}
+Qiu, Z., Song, P. \harvardand\ Tan, M.  \harvardyearleft 2008\harvardyearright
+  , `Simplex mixed-effects models for longitudinal proportional data', {\em
+  Scandinavian Journal of Statistics} {\bf 35}(4),~577--596.
+
+\harvarditem{{\proglang{R} Core Team}}{2017}{R}
+{\proglang{R} Core Team}  \harvardyearleft 2017\harvardyearright , {\em
+  \proglang{R}: A Language and Environment for Statistical Computing}, R
+  Foundation for Statistical Computing, Vienna, Austria.
+\newline\harvardurl{http://www.R-project.org/}
+
+\harvarditem{Rigby \harvardand\ Stasinopoulos}{2005}{Stasinopoulos2}
+Rigby, B. \harvardand\ Stasinopoulos, M.  \harvardyearleft
+  2005\harvardyearright , `Generalized additive models for location, scale and
+  shape', {\em Applied Statistical} {\bf 54}(3),~507--554.
+
+\harvarditem{Rigby \harvardand\ Stasinopoulos}{2008}{Stasinopoulos1}
+Rigby, B. \harvardand\ Stasinopoulos, M.  \harvardyearleft
+  2008\harvardyearright , `Instructions on how to use the gamlss package in r',
+  {\em Computational statistics and Data analysis} {\bf 2},~194--195.
+
+\harvarditem[Zeileis et~al.]{Zeileis, Cribari-Neto \harvardand\
+  Gr{\"u}n}{2010}{Zeileis1}
+Zeileis, A., Cribari-Neto, F. \harvardand\ Gr{\"u}n, B.  \harvardyearleft
+  2010\harvardyearright , `Beta regression in r', {\em Journal of statistical
+  software} {\bf 34}(2),~1--24.
+
+\harvarditem[Zhang et~al.]{Zhang, Qiu \harvardand\ Shi}{2016}{Zhang1}
+Zhang, P., Qiu, Z. \harvardand\ Shi, C.  \harvardyearleft 2016\harvardyearright
+  , `simplexreg: An r package for regression analysis of proportional data
+  using the simplex distribution', {\em Journal of Statistical Sftware} {\bf
+  71}(11).
+
+\end{thebibliography}

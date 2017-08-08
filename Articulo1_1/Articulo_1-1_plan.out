@@ -1,0 +1,16 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.2}{Distribuci\363n para datos proporcionales}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Distribuci\363n beta original}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Distribuci\363n beta parametrizaci\363n Ferrari y Cribari-Neto \(2004\)}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Distribuci\363n beta parametrizaci\363n Rigby y Stasinopoulos \(2005\)}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Distribuci\363n simplex}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Distribuci\363n ZOIP \(Zeros Ones Inflated Proporcional\)}{}% 7
+\BOOKMARK [1][-]{section.4}{Inferencia estad\355stica}{}% 8
+\BOOKMARK [1][-]{section.5}{Paquete ZOIP}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{Instalaci\363n}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.2}{Funciones sobre distribuci\363n ZOIP}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.3}{Funci\363n RM.ZOIP}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Aplicaci\363n}{}% 13
+\BOOKMARK [2][-]{subsection.6.1}{Datos simulados}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.2}{Datos reales}{section.6}% 15
+\BOOKMARK [1][-]{section.7}{Conclusiones}{}% 16
