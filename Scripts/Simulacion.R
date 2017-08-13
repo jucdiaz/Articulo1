@@ -11,7 +11,7 @@ c<-0.03 # 0.03 igual para todas
 d<-0.05 # 0.05 igual para todas
 
 
-j=1
+j=20
 mu=NULL
 sigma=NULL
 p0=NULL

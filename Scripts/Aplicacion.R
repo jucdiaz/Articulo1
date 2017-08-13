@@ -115,9 +115,9 @@ head(data)
 dim(data)
 formula.mu=y_i~SCORE+PROM_Cuotas+CUPO_TDC_ENTIDAD # en simplex CUPO_TDC_ENTIDAD no va
 formula.sigma=~SCORE+PROM_Cuotas+CUPO_TDC_ENTIDAD
-formula.p0=~SCORE+CUPO_TDC_ENTIDAD
-formula.p1=~1
-link=c('exp','exp','logit','identity')
+formula.p0=~SCORE+PROM_Cuotas+CUPO_TDC_ENTIDAD
+formula.p1=~SCORE+PROM_Cuotas+CUPO_TDC_ENTIDAD
+link=c('log','log','logit','logit')
 family='Original'
 system.time(mod<-RM.ZOIP(formula.mu=formula.mu,formula.sigma=formula.sigma,formula.p0=formula.p0,formula.p1=formula.p1,data=data,link=link,family=family))
 summary(mod)
