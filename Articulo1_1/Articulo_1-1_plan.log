@@ -1,12 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2016.3.24)  6 AUG 2017 20:54
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2016.3.24)  16 NOV 2017 23:19
 entering extended mode
 **Articulo_1-1_plan.tex
-("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\Articulo 1\Articulo1_1\Articulo1_1_Plantilla\Articulo_1-1_plan.tex
-"
+("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\Articulo_1-1_plan.tex"
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, german, ngerman, german-x-2009-06-19, ngerm
 an-x-2009-06-19, french, loaded.
-("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\Articulo 1\Articulo1_1\Articulo1_1_Plantilla\comunicaciones.cls"
+("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\comunicaciones.cls"
 Document Class: comunicaciones 2008/10/01 v1.0f
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
@@ -549,10 +548,10 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
 
 Package hyperref Warning: Option `pagebackref' has already been used,
-(hyperref)                setting the option has no effect on input line 27.
+(hyperref)                setting the option has no effect on input line 28.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 27.
-Package hyperref Info: Option `breaklinks' set `true' on input line 27.
+Package hyperref Info: Option `colorlinks' set `true' on input line 28.
+Package hyperref Info: Option `breaklinks' set `true' on input line 28.
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2009/05/18 v2.2 Customized lists
 \enit@toks=\toks40
@@ -563,29 +562,29 @@ Package: enumitem 2009/05/18 v2.2 Customized lists
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\upquote\upquote.sty"
 Package: upquote 2003/08/11 v1.1 Covington's upright-quote modification to verbatim and verb
 )
-("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\Articulo 1\Articulo1_1\Articulo1_1_Plantilla\Articulo_1-1_plan.aux
-")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 45.
- ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ts1cmr.fd"
+("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\Articulo_1-1_plan.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 46.
+
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 45.
-Package hyperref Info: Link coloring ON on input line 45.
+LaTeX Font Info:    ... okay on input line 46.
+Package hyperref Info: Link coloring ON on input line 46.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/01/25 v2.36 Cross-referencing by name of section
@@ -598,130 +597,155 @@ Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
 )
 \c@section@level=\count141
 )
-LaTeX Info: Redefining \ref on input line 45.
-LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
 
-("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\Articulo 1\Articulo1_1\Articulo1_1_Plantilla\Articulo_1-1_plan.out
-")
-("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\Articulo 1\Articulo1_1\Articulo1_1_Plantilla\Articulo_1-1_plan.out
-")
+("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\Articulo_1-1_plan.out")
+("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\Articulo_1-1_plan.out")
 \@outlinefile=\write4
 \AtBeginShipoutBox=\box59
-Package hyperref Info: *** compatibility with harvard ****  on input line 45.
+Package hyperref Info: *** compatibility with harvard ****  on input line 46.
 \c@lstlisting=\count142
 File: logo-usta.eps Graphic file (type eps)
- <logo-usta.eps>
-LaTeX Font Info:    Try loading font information for U+msa on input line 55.
+
+<logo-usta.eps>
+LaTeX Font Info:    Try loading font information for U+msa on input line 56.
  ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 55.
+LaTeX Font Info:    Try loading font information for U+msb on input line 56.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 55.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 56.
 
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 55.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 55.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 55.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 56.
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
 
  []
 
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 74.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 75.
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 [3]
-Overfull \hbox (1.30455pt too wide) in paragraph at lines 125--125
-[]\OT1/cmr/bx/n/12 Distribucion be-ta parametrizacion Fer-rari y Cribari-Neto
+Overfull \hbox (3.02678pt too wide) in paragraph at lines 132--132
+[]\OT1/cmr/bx/n/12 Distribucion Be-ta parametrizacion Fer-rari y Cribari-Neto
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Overfull \hbox (21.11499pt too wide) in paragraph at lines 216--217
+[]\OT1/cmr/m/n/10 donde $ (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 )$ esta da-do por la fun-cion$ $ in-com-ple-ta definid
+o co-mo $ (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ) = [][] []$,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
 [6]
-Overfull \hbox (3.93869pt too wide) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
+
+ []
+
+
+Overfull \hbox (5.18869pt too wide) in paragraph at lines 252--253
 []\OT1/cmr/m/n/10 Si para la dis-tribu-cion $\OML/cmm/m/it/10 ZOIP\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; ; p[]; p[]\OT1/
-cmr/m/n/10 )$ se elige la dis-tribu-cion be-ta con parametri-
+cmr/m/n/10 )$ se elige la dis-tribu-cion Be-ta con parametri-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 File: Dist_ZOIP.eps Graphic file (type eps)
 <Dist_ZOIP.eps> [7]
-Underfull \hbox (badness 10000) in paragraph at lines 280--283
+Underfull \hbox (badness 10000) in paragraph at lines 292--295
 
  []
 
 [8]
-Overfull \hbox (35.71141pt too wide) detected at line 323
+Overfull \hbox (37.94751pt too wide) detected at line 339
 [] \OT1/cmr/m/n/10 = [] [] + [] \OMS/cmsy/m/n/10   []   [] \OT1/cmr/m/n/10 = 0
  []
 
 
-Overfull \hbox (52.93356pt too wide) detected at line 326
+Overfull \hbox (55.16966pt too wide) detected at line 342
 [] \OT1/cmr/m/n/10 = [] [] + [] \OMS/cmsy/m/n/10   []   [] \OT1/cmr/m/n/10 = 0
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 351--354
+Underfull \hbox (badness 10000) in paragraph at lines 367--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
 
  []
 
 
-Overfull \hbox (40.3469pt too wide) detected at line 368
+Overfull \hbox (36.48572pt too wide) detected at line 384
 \OML/cmm/m/it/10 `[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10  []\OML/cmm/m/it/10 log\O
 T1/cmr/m/n/10 (2\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   []\OML/cmm/m/it/10 log\OT1/cmr/m/n/10 (\OML/cmm/m
 /it/10 []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] [] []   [] []
@@ -732,52 +756,28 @@ Overfull \hbox (2.8672pt too wide) has occurred while \output is active
 \OT1/cmr/bx/n/10 10 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
  []
 
-[10]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 396.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\f@series' on input line 396.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 396.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\font@name' on input line 396.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\OT1/cmr/b/n/14.4' on input line 396.
-
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 405.
-("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ts1cmtt.fd"
-File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
-
- []
-
-
+[10] [11]
 Underfull \hbox (badness 10000) in paragraph at lines 433--434
 
  []
 
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 436.
+("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ts1cmtt.fd"
+File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--455
+
+ []
 
 
 Overfull \hbox (2.8672pt too wide) has occurred while \output is active
@@ -785,7 +785,7 @@ Overfull \hbox (2.8672pt too wide) has occurred while \output is active
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
 
@@ -793,6 +793,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 473--474
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -801,28 +806,42 @@ Overfull \hbox (2.8672pt too wide) has occurred while \output is active
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 523--524
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
 
  []
 
 
-Overfull \hbox (13.16933pt too wide) in paragraph at lines 525--526
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
+
+ []
+
+
+Overfull \hbox (13.16933pt too wide) in paragraph at lines 580--581
 \OT1/cmr/m/n/10 Neto (2004), ZOIP-beta$(\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = 14\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/c
 mm/m/it/10 ;  \OT1/cmr/m/n/10 = 9\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; p[] \OT1/cmr/m/n/10 = 0\OML/cmm/
 m/it/10 :\OT1/cmr/m/n/10 03\OML/cmm/m/it/10 ; p[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 05)$ en la parame
 trizacion
  []
 
-File: Simulacion_RS_FC.eps Graphic file (type eps)
-<Simulacion_RS_FC.eps>
-File: Simulacion_Ori_Sim.eps Graphic file (type eps)
- <Simulacion_Ori_Sim.eps> [15]
+
 Overfull \hbox (2.8672pt too wide) has occurred while \output is active
 \OT1/cmr/bx/n/10 16 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
+File: Simulacion_RS_FC.eps Graphic file (type eps)
+ <Simulacion_RS_FC.eps>
+File: Simulacion_Ori_Sim.eps Graphic file (type eps)
+ <Simulacion_Ori_Sim.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 595--596
 
  []
 
@@ -834,42 +853,34 @@ File: Mape_gnrl.eps Graphic file (type eps)
  <Mape_gnrl.eps>
 File: Mape_gnrl_infla.eps Graphic file (type eps)
  <Mape_gnrl_infla.eps>
-Underfull \vbox (badness 1571) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]
 Overfull \hbox (2.8672pt too wide) has occurred while \output is active
 \OT1/cmr/bx/n/10 18 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 604--605
-
- []
-
-[19]
-File: Hist_tdc.eps Graphic file (type eps)
- <Hist_tdc.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 648--649
-
- []
-
-
+[18] [19]
 Overfull \hbox (2.8672pt too wide) has occurred while \output is active
 \OT1/cmr/bx/n/10 20 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
  []
 
 [20]
-File: Aplicacion_SC.eps Graphic file (type eps)
- <Aplicacion_SC.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 667--668
+Underfull \hbox (badness 10000) in paragraph at lines 659--660
+
+ []
+
+File: Hist_tdc.eps Graphic file (type eps)
+<Hist_tdc.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
 
  []
 
 [21]
-("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\Articulo 1\Articulo1_1\Articulo1_1_Plantilla\Articulo_1-1_plan.bbl
-"
-Underfull \hbox (badness 7540) in paragraph at lines 45--45
-[]| | \OT1/cmr/m/n/10 Os-pina, R. & Fer-rari, S. (2010), `In-flat-ed be-ta dis-tri-bu-tions on-line:
+File: Aplicacion_SC.eps Graphic file (type eps)
+ <Aplicacion_SC.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 722--723
+
  []
 
 
@@ -877,33 +888,45 @@ Overfull \hbox (2.8672pt too wide) has occurred while \output is active
 \OT1/cmr/bx/n/10 22 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
  []
 
-[22]
+[22] ("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\Articulo_1-1_plan.bbl"
+Underfull \hbox (badness 1199) in paragraph at lines 9--9
+[]| | \OT1/cmr/m/n/10 Cepeda-Cuervo, E., Jaimes, D., Marin, M. & Ro-jas, J. (2016), `Bayesian
+ []
+
+[23]
+Underfull \hbox (badness 7540) in paragraph at lines 52--52
+[]| | \OT1/cmr/m/n/10 Os-pina, R. & Fer-rari, S. (2010), `In-flat-ed be-ta dis-tri-bu-tions on-line:
+ []
+
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 71.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 78.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 685.
- [23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 685.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 740.
 
-("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\Articulo 1\Articulo1_1\Articulo1_1_Plantilla\Articulo_1-1_plan.aux
-")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 685.
+Overfull \hbox (2.8672pt too wide) has occurred while \output is active
+\OT1/cmr/bx/n/10 24 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
+ []
+
+[24]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 740.
+ ("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\Articulo_1-1_plan.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 740.
 Package rerunfilecheck Info: File `Articulo_1-1_plan.out' has not changed.
-(rerunfilecheck)             Checksum: F90C536BFB5AEDF60E0E2F454EE46545;1172.
+(rerunfilecheck)             Checksum: 9A275BB2912DA28DF06362B05B66AA0D;1175.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 9425 strings out of 495286
- 135490 string characters out of 3179895
- 315015 words of memory out of 3000000
- 12391 multiletter control sequences out of 15000+200000
- 18224 words of font info for 70 fonts, out of 3000000 for 9000
+ 9436 strings out of 495286
+ 135378 string characters out of 3179895
+ 317098 words of memory out of 3000000
+ 12401 multiletter control sequences out of 15000+200000
+ 18577 words of font info for 71 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 54i,15n,35p,1476b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,15n,35p,1486b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Articulo_1-1_plan.dvi (23 pages, 112684 bytes).
+Output written on Articulo_1-1_plan.dvi (24 pages, 114100 bytes).

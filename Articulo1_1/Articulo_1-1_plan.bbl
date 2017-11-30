@@ -1,5 +1,12 @@
 \begin{thebibliography}{xx}
 
+\harvarditem[Cepeda-Cuervo et~al.]{Cepeda-Cuervo, Jaimes, Marin \harvardand\
+  Rojas}{2016}{Cepeda1}
+Cepeda-Cuervo, E., Jaimes, D., Marin, M. \harvardand\ Rojas, J.
+  \harvardyearleft 2016\harvardyearright , `Bayesian beta regression with
+  bayesianbetareg r-package', {\em Computational Statistics} {\bf
+  31}(1),~165--187.
+
 \harvarditem{Ferrari \harvardand\ Cribari-Neto}{2004}{Ferrari2}
 Ferrari, S. \harvardand\ Cribari-Neto, F.  \harvardyearleft
   2004\harvardyearright , `Beta regression for modelling rates and
