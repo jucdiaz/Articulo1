@@ -17,18 +17,18 @@ rZOIP(n=8, mu = 0.2, sigma = 3, p0 = 0.2, p1 = 0.2,family='Simplex')
 par(mfrow=c(2,2))
 
 x<-dZOIP(y, mu = 0.6, sigma = 0.2, p0 = 0.3, p1 = 0.2,family='R-S')
-plot(y,x,type='l',main=expression(paste('Distribuci贸n ZOIP \nbeta R-S ',mu,'=0.6 ',sigma,'=0.2 ',p0,'=0.3 ',p1,'=0.2 '))
+plot(y,x,type='l',main=expression(paste('Distribuci髇 ZOIP \nbeta R-S ',mu,'=0.6 ',sigma,'=0.2 ',p[0],'=0.3 ',p[1],'=0.2 '))
      ,xlab='y',ylab='Densidad',las=1)
 
 x<-dZOIP(y, mu = 0.6, sigma = 24, p0 = 0.3, p1 = 0.2,family='F-C')
-plot(y,x,type='l',main=expression(paste('Distribuci贸n ZOIP \nbeta F-C ',mu,'=0.6 ',sigma,'=24 ',p0,'=0.3 ',p1,'=0.2 '))
+plot(y,x,type='l',main=expression(paste('Distribuci髇 ZOIP \nbeta F-C ',mu,'=0.6 ',sigma,'=24 ',p[0],'=0.3 ',p[1],'=0.2 '))
      ,xlab='y',ylab='Densidad',las=1)
 
 x<-dZOIP(y, mu = 14.4, sigma = 9.6, p0 = 0.3, p1 = 0.2,family='Original')
-plot(y,x,type='l',main=expression(paste('Distribuci贸n ZOIP \nbeta Original ',mu,'=14.4 ',sigma,'=9.6 ',p0,'=0.3 ',p1,'=0.2 '))
+plot(y,x,type='l',main=expression(paste('Distribuci髇 ZOIP \nbeta Original ',mu,'=14.4 ',sigma,'=9.6 ',p[0],'=0.3 ',p[1],'=0.2 '))
      ,xlab='y',ylab='Densidad',las=1)
 
 x<-dZOIP(y, mu = 0.4, sigma = 0.2, p0 = 0.3, p1 = 0.2,family='Simplex')
-plot(y,x,type='l',main=expression(paste('Distribuci贸n ZOIP \nSimplex ',mu,'=0.6 ',sigma,'=24 ',p0,'=0.3 ',p1,'=0.2'))
+plot(y,x,type='l',main=expression(paste('Distribuci髇 ZOIP \nSimplex ',mu,'=0.6 ',sigma,'=24 ',p[0],'=0.3 ',p[1],'=0.2'))
      ,xlab='y',ylab='Densidad',las=1,ylim=c(0,4))
 
