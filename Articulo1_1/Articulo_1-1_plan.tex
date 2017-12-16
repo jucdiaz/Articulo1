@@ -213,15 +213,16 @@ donde $0<\mu<1$ y $\sigma>0$. Además el valor esperado y la varianza están dadas
 \end{split} \label{V_Simplex}
 \end{align}
 
-donde $\Gamma(a,b)$ está dado por la función$ \Gamma$ incompleta definido como $\Gamma(a,b)=\int_{b}^{\infty}{t^{a-1}b^tdt}$, ver más en \citeasnoun{Zhang1}.
+donde $\Gamma(a,b)$ está dado por la función $\Gamma$ incompleta definido como $\Gamma(a,b)=\int_{b}^{\infty}{t^{a-1}b^tdt}$, ver más en \citeasnoun{Zhang1}.
 
 \section{Distribución ZOIP (Zeros Ones Inflated Proporcional)}
 
-En las distribuciones vistas en la sección \ref{Sec_dist_prop}, se evidenciaron ciertas distribuciones que se ajustan al comportamiento de datos proporcionales, porcentajes o tasas que están en el intervalo (0,1), sin embargo es común que estos datos tomen valores en cero y/o uno que representarían la ausencia o presencia total de cierta característica, por lo que no sería posible ajustar los datos a las distribuciones vistas anteriormente y es por eso que en este trabajo se propone la distribución ZOIP, como un conjunto de distribuciones para datos proporcionales inflados con ceros y/o unos.
+En las distribuciones vistas en la sección \ref{Sec_dist_prop}, se evidenciaron algunas distribuciones que se ajustan al comportamiento de datos proporcionales, porcentajes o tasas que están en el intervalo (0,1), sin embargo es común que estos datos tomen valores en cero y/o uno que representarían la ausencia o presencia total de cierta característica, por lo que no sería posible ajustar los datos a las distribuciones vistas anteriormente y es por eso que en este trabajo se propone la distribución ZOIP, como un conjunto de distribuciones para datos proporcionales inflados con ceros y/o unos.
 
 La distribución para datos proporcionales inflados con ceros y/o unos se compone de la mezcla de tres distribuciones, dos de ellas discretas, que son distribuciones degeneradas en cero y uno, y una tercera distribución continua que además es una función de densidad de probabilidad para datos proporcionales, como las presentadas anteriormente.\\
 
-Si la variable aleatoria $y$ tiene distribución ZOIP con parámetros $\mu$, $\sigma$, $p_0$ y $p_1$, se denotará como $Y \sim$ ZOIP$(\mu,\sigma, p_0, p_1)$, la función de densidad de probabilidad está dado por:
+Si la variable aleatoria $y$ tiene distribución ZOIP con parámetros $\mu$, $\sigma$, $p_0$ y $p_1$, se denotará como \\
+$Y \sim$ ZOIP$(\mu,\sigma, p_0, p_1)$, la función de densidad de probabilidad está dado por:
 
 \begin{equation}
 g(y;\mu,\sigma, p_{0}, p_{1})=
@@ -253,11 +254,11 @@ Si para la distribución $ZOIP(\mu, \sigma, p_0, p_1)$ se elige la distribución B
 
 La distribución ZOIP se encuentra inflada con ceros y unos, es decir bilateralmente, pero existe la posibilidad que hayan casos de estudio en que se encuentren datos inflados con unos únicamente, por lo que $p_0=0$ y por lo tanto se estará llamando no una distribución ZOIP, sino una distribución OIP (Ones Inflated Proporcional) y si los datos se encuentran inflados con ceros únicamente, es decir $p_1=0$ se tendrá una distribución ZIP (Zeros Inflated Proporcional), si los datos no se encuentran inflados, entonces $p_0=p_1=0$ y la distribución ZOIP será una distribución para datos proporcionales clásica.\\
 
-En la Figura \ref{Dist_ZOIP} se muestran las densidades para algunas distribuciones ZOIP-beta en sus diferentes parametrizaciones y ZOIP-simplex, es de aclarar que, en las Figuras ubicadas en la esquina superior izquierda, esquina superior derecha y esquina inferior izquierda, los valores de los parámetros son diferentes, pero dan como resultado la misma distribución gracias a las ecuaciones descritas en \eqref{FC_Origin1}, \eqref{FC_Origin2} para el caso \citeasnoun{Ferrari2} y \eqref{RS_Origin1}, \eqref{RS_Origin2} para el caso \citeasnoun{Stasinopoulos2}. Además se puede observar en la Figura 1d. como la distribución ZOIP-simplex hereda el comportamiento  bimodal de la distribución clásica simplex, con valores mínimo y máximo en cero y uno respectivamente. 
+En la Figura \ref{Dist_ZOIP} se muestran las densidades para algunas distribuciones ZOIP-Beta en sus diferentes parametrizaciones y ZOIP-simplex, es de aclarar que, en las Figuras ubicadas en la esquina superior izquierda, esquina superior derecha y esquina inferior izquierda, los valores de los parámetros son diferentes, pero dan como resultado la misma distribución gracias a las ecuaciones descritas en \eqref{FC_Origin1}, \eqref{FC_Origin2} para el caso \citeasnoun{Ferrari2} y \eqref{RS_Origin1}, \eqref{RS_Origin2} para el caso \citeasnoun{Stasinopoulos2}. Además se puede observar en la Figura 1d. como la distribución ZOIP-simplex hereda el comportamiento  bimodal de la distribución clásica simplex, con valores mínimo y máximo en cero y uno respectivamente. 
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[scale=0.5]{Dist_ZOIP.eps}
+		\includegraphics[scale=0.45]{Dist_ZOIP.eps}
 		\caption{Densidades para la distribución ZOIP para algunos valores de los parámetros, donde R-S se refiere a Rigby \& Stasinopoulos (2005) y F-C es Ferrari \& Cribari-Neto (2004).}
 		\label{Dist_ZOIP}
 	\end{center}
@@ -269,7 +270,7 @@ En la Figura \ref{Dist_ZOIP} se muestran las densidades para algunas distribucio
 Para estimar los parámetros de la distribución ZOIP se usa el método de máxima verosimilitud. La función de verosimilitud para $\boldsymbol{\theta}=(\mu, \sigma, p_0, p_1)^{\top}$, basado en una muestra de $\boldsymbol{y}_i$ observaciones independientes, es de la forma:
 
 \begin{equation}
-L(\boldsymbol{\theta})=\prod_{i=1}^{n}g(\boldsymbol{y}_i;\mu, \sigma, p_0, p_1) 
+L(\boldsymbol{\theta})=\prod_{i=1}^{n}g(y_i;\mu, \sigma, p_0, p_1) 
 \label{F_likel}
 \end{equation}
 
@@ -420,24 +421,20 @@ Para acceder a la última versión del paquete \verb|ZOIP|, se debe ingresar al re
 
 \begin{verbatim}
 if (!require("devtools")) install.packages("devtools")
-if (!require("rmutil")) install.packages("rmutil")
-if (!require("boot")) install.packages("boot")
-if (!require("numDeriv")) install.packages("numDeriv")
-if (!require("GHQp")) install.packages("GHQp")
 devtools::install_github("jucdiaz/ZOIP", force = TRUE)
 library(ZOIP) # Carga el paquete
 \end{verbatim}
 
 \subsection{Funciones sobre distribución ZOIP}
 
-En el paquete \verb|ZOIP| existen cuatro funciones llamadas \code{dZOIP}, \code{pZOIP}, \code{qZOIP} y \code{rZOIP} que corresponden a las funciones de densidad de probabilidad, la función de distribución acumulada, la función cuantil y la función generadora de números aleatorios de la distribución ZOIP, respectivamente; estas cuatro funciones tendrán como argumentos los parámetros de la distribución y un argumento llamado \code{family}, que corresponderá a el tipo de distribución para datos proporcionales a utilizar. en el siguiente código se observa cómo se halla la densidad de probabilidad en el punto $0.5$ de una distribución ZOIP-beta con parametrización \citeasnoun{Stasinopoulos2} descrita como $\text{ZOIP}(\mu=0.2, \, \sigma=0.5, \, p_0=0.2, \, p_1=0.2)$\\
+En el paquete \verb|ZOIP| existen cuatro funciones llamadas \code{dZOIP}, \code{pZOIP}, \code{qZOIP} y \code{rZOIP} que corresponden a las funciones de densidad de probabilidad, la función de distribución acumulada, la función cuantil y la función generadora de números aleatorios de la distribución ZOIP, respectivamente; estas cuatro funciones tendrán como argumentos los parámetros de la distribución y un argumento llamado \code{family}, que corresponderá a el tipo de distribución para datos proporcionales a utilizar. en el siguiente código se observa cómo se halla la densidad de probabilidad en el punto $0.5$ de una distribución ZOIP-Beta con parametrización \citeasnoun{Stasinopoulos2} descrita como $\text{ZOIP}(\mu=0.2, \, \sigma=0.5, \, p_0=0.2, \, p_1=0.2)$\\
 
 \begin{verbatim}
 dZOIP(x=0.5, mu=0.2, sigma=0.5, p0=0.2, p1=0.2, family='R-S')
 ##[1] 0.3243543
 \end{verbatim}
 
-Además se halla la probabilidad acumulada hasta el punto $0.5$ de una distribución OIP-beta con parametrización \citeasnoun{Ferrari2} dada por $\text{ZOIP}(\mu=0.2, \, \sigma=3, \, p_0=0, \, p_1=0.2)$\\
+Además se halla la probabilidad acumulada hasta el punto $0.5$ de una distribución OIP-Beta con parametrización \citeasnoun{Ferrari2} dada por $\text{ZOIP}(\mu=0.2, \, \sigma=3, \, p_0=0, \, p_1=0.2)$\\
 
 \begin{verbatim}
 pZOIP(q=0.5, mu=0.2, sigma=3, p0=0, p1=0.2, family='F-C')
@@ -479,7 +476,7 @@ Los argumentos de la función \code{RM.ZOIP} son:
 \item \code{optimizer}: Elecci\'{o}n del optimizador, utilizado para encontrar la convergencia de la m\'{a}xima verosimilitud. se puede elegir el valor de \code{``nlminb''} o \code{``optim''}, por defecto \code{``nlminb''}
 \end{itemize}
 
-En el siguiente ejemplo se mostrará el ajuste de una distribuci\'{o}n ZOIP, para ello mostraremos la salida de la funci\'{o}n \code{RM.ZOIP} de $1000$ observaciones simuladas para la distribuci\'{o}n ZOIP-beta parametrizaci\'{o}n \cite{Stasinopoulos2}.\\
+En el siguiente ejemplo se mostrará el ajuste de una distribuci\'{o}n ZOIP, para ello mostraremos la salida de la funci\'{o}n \code{RM.ZOIP} de $1000$ observaciones simuladas para la distribuci\'{o}n ZOIP-Beta parametrizaci\'{o}n \cite{Stasinopoulos2}.\\
 
 \begin{verbatim}
 yi <- data.frame(yi = rZOIP(n = 1000, mu = 0.6, sigma = 0.2, 
@@ -526,7 +523,7 @@ mod
 ## [1] 488.2683
 \end{verbatim}
 
-En el anterior resultado se obtienen varios aspectos importantes de la salida del ajuste de la distribuci\'{o}n y leyendo de arriba hacia abajo, primero que todo nos muestra la distribuci\'{o}n ajustada, luego para cada el valor ajustado para cada par\'{a}metro de la distribuci\'{o}n ZOIP, luego un indicador de convergencia del ajuste, donde 0 indica la convergencia, despu\'{e}s un mensaje sobre la convergencia (resultados heredados de la funci\'{o}n \code{nlimnb}), despu\'{e}s se encuentra el n\'{u}mero de iteraciones que fueron necesarias para que convergiera el ajuste de la distribuci\'{o}n, por \'{u}ltimo se encuentra valor de la log-verosimilitud que nos permitir\'{a} hacer comparaciones entre ajustes de distribuciones.\\ 
+En el anterior resultado se obtienen varios aspectos importantes de la salida del ajuste de la distribuci\'{o}n y leyendo de arriba hacia abajo, primero que todo nos muestra la distribuci\'{o}n ajustada, luego el valor ajustado para cada par\'{a}metro de la distribuci\'{o}n ZOIP, luego un indicador de convergencia del ajuste, donde 0 indica la convergencia, despu\'{e}s un mensaje sobre la convergencia (resultados heredados de la funci\'{o}n \code{nlimnb}), despu\'{e}s se encuentra el n\'{u}mero de iteraciones que fueron necesarias para que convergiera el ajuste de la distribuci\'{o}n, por \'{u}ltimo se encuentra valor de la log-verosimilitud que nos permitir\'{a} hacer comparaciones entre ajustes de distribuciones.\\ 
 
  Al aplicar a la distribuci\'{o}n ajustada (\code{mod}) la funci\'{o}n \code{summary} se obtiene el siguiente resultado:
 
@@ -569,15 +566,15 @@ Con la funci\'{o}n \code{summary} aplicada a la distribuci\'{o}n ZOIP ajustada, 
 
 En el resultado anterior se obtienen los valores de $\hat{\mu}=0.6066914$, $\hat{\sigma}=0.196643$, $\hat{p}_0=0.0339992$ y $\hat{p}_1=0.0450005$, que son similares a los par\'{a}metros con los que se simuló $y_i$. Adem\'{a}s cabe resaltar que en la funci\'{o}n \code{RM.ZOIP} para ajustar distribuciones de probabilidad no es necesario colocar funciones de enlace ni espacio de busqueda de los par\'{a}metros, ya que estos son introducidas autom\'{a}ticamente de acuerdo a el valor tomado en \code{family}.\\
 
-As\'{\i} como la funci\'{o}n \code{summary} puede ser aplicada a un objeto de la clase \code{ZOIP} o \code{ZOIPM}, en este trabajo se implementaron otros tipo de funciones asociadas a m\'{e}todos S3 de \proglang{R} a objetos de clase \code{ZOIP} o clase \code{ZOIPM}, tales como la funci\'{o}n \code{print} y \code{coef}, que permiten mostrar los resultados del modelo ajustado en general y los par\'{a}metros regresores estimados, respetivamente.
+As\'{\i} como la funci\'{o}n \code{summary} puede ser aplicada a un objeto de la clase \code{ZOIP}, en este trabajo se implementaron otros tipo de funciones asociadas a m\'{e}todos S3 de \proglang{R} a objetos de clase \code{ZOIP}, tales como la funci\'{o}n \code{print} y \code{coef}, que permiten mostrar los resultados del modelo ajustado en general y los par\'{a}metros regresores estimados, respetivamente.
 
-\section{Aplicación}
-En esta sección se muestran varios resultados sobre el ajuste de una distribución ZOIP, primero se realizó un estudio de simulación para observar la convergencia de la estimación de los parámetros de la distribución, y en segunda instancia se ajustó una distribución ZOIP a datos reales sobre la utilización de una tarjeta de crédito de una entidad financiera.
+%\section{Aplicación}
+%En esta sección se muestran varios resultados sobre el ajuste de una distribución ZOIP, primero , y en segunda instancia se ajustó una distribución ZOIP a datos reales sobre la utilización de una tarjeta de crédito de una entidad financiera.
 
-\subsection{Datos simulados}
-En este estudio de simulación se analizan diferentes aspectos de la capacidad de estimación que tiene el método de máxima verosimilitud sobre los parámetros de la distribución ZOIP. Se generaron muestras de una distribución ZOIP bajo las diferentes distribuciones y parámetrizaciones con tamaños de muestra n de: 5, 10, 15,..., 500, y se realizaron 1000 réplicas para cada tamaño de muestra, posteriormente se calculó la mediana de cada una de las estimaciones de los parámetros, y así poder analizar la capacidad de convergencia de las metodologías implementadas en la distribución ZOIP y en el paquete \verb|ZOIP|.\\
+\section{Estudio de simulación}
+En esta sección se realizó un estudio de simulación para observar la convergencia de la estimación de los parámetros de la distribución ZOIP para esto se analizan diferentes aspectos de la capacidad de estimación que tiene el método de máxima verosimilitud sobre los parámetros de la distribución ZOIP. Se generaron muestras de una distribución ZOIP bajo las diferentes distribuciones y parámetrizaciones con tamaños de muestra n de: 5, 10, 15, ..., 500, y se realizaron 1000 réplicas para cada tamaño de muestra, posteriormente se calculó la mediana de cada una de las estimaciones de los parámetros, y así poder analizar la capacidad de convergencia de las metodologías implementadas en la distribución ZOIP y en el paquete \verb|ZOIP|.\\
 
-En el primer escenario del estudio de simulación se generaron los datos de una distribución ZOIP-beta$(\mu=0.6 ,\sigma=0.2 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Stasinopoulos2}, ZOIP-beta$(\mu=0.6 , \sigma=24 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Ferrari2}, ZOIP-beta$(\mu=14.4 , \sigma=9.6 , p_0=0.03 , p_1= 0.05)$ en la parametrización original, cabe aclarar que las tres parametrizaciones anteriores generan exactamente la misma distribución, esto gracias a las ecuaciones definidas en \eqref{FC_Origin1}, \eqref{FC_Origin2}, \eqref{RS_Origin1} y \eqref{RS_Origin2}, de igual manera se generó la misma cantidad de datos simulados para la distribución ZOIP-simplex$(\mu=0.4 , \sigma=0.2 , p_0=0.03 , p_1= 0.05)$.
+En el primer escenario del estudio de simulación se generaron los datos de una distribución ZOIP-Beta$(\mu=0.6 ,\sigma=0.2 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Stasinopoulos2}, ZOIP-Beta$(\mu=0.6 , \sigma=24 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Ferrari2}, ZOIP-Beta$(\mu=14.4 , \sigma=9.6 , p_0=0.03 , p_1= 0.05)$ en la parametrización original, cabe aclarar que las tres parametrizaciones anteriores generan exactamente la misma distribución, esto gracias a las ecuaciones definidas en \eqref{FC_Origin1}, \eqref{FC_Origin2}, \eqref{RS_Origin1} y \eqref{RS_Origin2}, de igual manera se generó la misma cantidad de datos simulados para la distribución ZOIP-simplex$(\mu=0.4 , \sigma=0.2 , p_0=0.03 , p_1= 0.05)$.
 
 
 \begin{figure}
@@ -655,8 +652,10 @@ En la Figura \ref{Simu_2} se presentan las estimaciones de los parámetros de la 
 En la Figura \ref{Mapes}b se presenta el MAPE para el estudio de simulación del escenario 2, se puede ver como se obtienen MAPES muy parecidos a los del estudio de simulación del escenario 1, pero cabe resaltar como se comete menos error sobre la estimación de los parámetros de la distribución Beta con parametrización \citeasnoun{Stasinopoulos2}. En la tabla \ref{T_MAPES} se presenta el MAPE para cada parámetro de cada parametrización para ambos estudios de simulación, es claro ver como en general el estudio de simulación del escenario 2 produce un MAPE menor que el del escenario 1, esto es causado por que en el escenario 1 de simulación los errores de pronóstico son más grandes en los parámetros de inflación que en el escenario 2. Por todo lo visto anteriormente se puede concluir que el crecimiento de los parámetros de inflación no afecta de manera significativa la estimación de los parámetros de la parte continua de la distribución ZOIP, pero si en una mejor estimación de los parámetros de inflación.
 
 
-\subsection{Datos reales}
-En esta sección se presenta el ajuste de una distribución ZOIP a datos reales sobre la utilización de una tarjeta de crédito en un banco. Para una entidad financiera grande como un banco es de vital importancia conocer el comportamiento del porcentaje de utilización de sus tarjetas de crédito (tdc), se define a $y$ como el porcentaje de uso de una tdc (saldo utilizado sobre cupo total de la tdc), en la Figura \ref{hist_tdc} se presenta el histograma del porcentaje de utilización de las tdc y es claro notar que $y$ se encuentra entre cero y uno, pero adicional es muy común ver que las tdc no sean utilizadas ($y=0$) y también que las tdc sean utilizadas en la totalidad de su cupo asignado ($y=1$), por lo que se trata a $y$ como una variable aleatoria perteneciente a datos proporcionales inflados con ceros y unos. Se tiene un total de $9206$ tdc, que representan el porcentaje de utilización de las tdc para un trimestre del año 2014 del banco. Se quiere estudiar el ajuste de una distribución ZOIP, para ello se utiliza el paquete en \proglang{R} llamado \verb|ZOIP| mediante su función \code{RM.ZOIP}.\\
+\section{Aplicación a datos reales}
+En esta sección se presenta el ajuste de una distribución ZOIP a datos reales sobre la utilización de una tarjeta de crédito en un banco.\\
+
+Para una entidad financiera grande como un banco es de vital importancia conocer el comportamiento del porcentaje de utilización de sus tarjetas de crédito (tdc), se define a $y$ como el porcentaje de uso de una tdc (saldo utilizado sobre cupo total de la tdc), en la Figura \ref{hist_tdc} se presenta el histograma del porcentaje de utilización de las tdc y es claro notar que $y$ se encuentra entre cero y uno, pero adicional es muy común ver que las tdc no sean utilizadas ($y=0$) y también que las tdc sean utilizadas en la totalidad de su cupo asignado ($y=1$), por lo que se trata a $y$ como una variable aleatoria perteneciente a datos proporcionales inflados con ceros y unos. Se tiene un total de $9206$ tdc, que representan el porcentaje de utilización de las tdc para un trimestre del año 2014 del banco. Se quiere estudiar el ajuste de una distribución ZOIP, para ello se utiliza el paquete en \proglang{R} llamado \verb|ZOIP| mediante su función \code{RM.ZOIP}.\\
 
 \begin{figure}
 	\begin{center}
@@ -700,18 +699,18 @@ Familia & Parámetro & Estimación & Error estándar & Valor P & Log-Verosimilitud\
 \end{table}
 
 
-En la Tabla \ref{T_Apli_SC} se muestran resultados de los cuatro parámetros estimados vía máxima verosimilitud para la distribución ZOIP, en ellas vemos cómo cambian los valores de los parámetros según la parametrización escogida, los valores de log-verosimilitud indican que el mejor modelo ajustado es un ZOIP-beta, ya que es bastante menor el valor de log-verosimilitud de una distribución ZOIP-simplex, además que en las estimaciones de los parámetros de la distribución ZOIP-simplex no se tuvo una convergencia, por lo tanto los valores son muy distintos para el parámetro de dispersión a los vistos en la distribución ZOIP-beta, inclusive muy elevados. Además, el valor de $\mu$ es mayor que las de la parametrización en \citeasnoun{Stasinopoulos2} y \citeasnoun{Ferrari2}, un 17\% más.\\
+En la Tabla \ref{T_Apli_SC} se muestran resultados de los cuatro parámetros estimados vía máxima verosimilitud para la distribución ZOIP, en ellas vemos cómo cambian los valores de los parámetros según la parametrización escogida, los valores de log-verosimilitud indican que el mejor modelo ajustado es un ZOIP-Beta, ya que es bastante menor el valor de log-verosimilitud de una distribución ZOIP-simplex, además que en las estimaciones de los parámetros de la distribución ZOIP-simplex no se tuvo una convergencia, por lo tanto los valores son muy distintos para el parámetro de dispersión a los vistos en la distribución ZOIP-Beta, inclusive muy elevados. Además, el valor de $\mu$ es mayor que las de la parametrización en \citeasnoun{Stasinopoulos2} y \citeasnoun{Ferrari2}, un 17\% más.\\
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[scale=0.45]{Aplicacion_SC.eps}
+		\includegraphics[scale=0.45]{Aplicacion_SC2.eps}
 		\caption{Ajuste de diferentes distribuciones y parametrizaciones ZOIP al porcentaje de utilización de una tdc.}
 		\label{Apli_Aju_ZOIP}
 	\end{center}
 \end{figure}
 
 
-En la Figura \ref{Apli_Aju_ZOIP} se presenta gráficamente el ajuste de la distribución ZOIP para diferentes parametrizaciones al porcentaje de utilización de las tdc, la línea azul que representa la distribución ZOIP ajustada, es de notar que dicha línea azul es exactamente igual en las tres ocasiones que se ajusta la distribución ZOIP-beta y se ve como sigue el comportamiento original del porcentaje de utilización de las tdc. Es bueno resaltar también como en la Figura 1d de la Figura \ref{Apli_Aju_ZOIP} no se nota un buen ajuste para los valores entre cero y uno. Por todo anterior es recomendable decir que el porcentaje de utilización de las tdc de este banco se comportan como una distribución ZOIP-beta con los parámetros descritos en la tabla \ref{T_Apli_SC}, según la parametrización deseada y no como una distribución ZOIP-simplex.
+En la Figura \ref{Apli_Aju_ZOIP} se presenta gráficamente el ajuste de la distribución ZOIP-Beta a la izquierda y de la distribución ZOIP-simplex a la derecha sobre la densidad empírica del porcentaje de utilización de las tdc, la línea punteada representa la distribución ZOIP ajustada, cabe resaltar que el ajuste de la distribución ZOIP-Beta es igual en las tres parametrizaciones planteadas, por lo que se presenta una sola grafica para las tres parametrizaciones, se ve como la distribución ZOIP-Beta sigue el comportamiento original del porcentaje de utilización de las tdc. Es bueno resaltar también que la distribución ZOIP-simplex no tiene un buen ajuste para los valores entre cero y uno. Por todo anterior es recomendable decir que el porcentaje de utilización de las tdc de este banco se comportan como una distribución ZOIP-Beta con los parámetros descritos en la tabla \ref{T_Apli_SC}, según la parametrización deseada y no como una distribución ZOIP-simplex.
 
 
 %Note además como en la gráfica de la distribución empírica de los datos hay más presencia de ceros que de uno e incluso es la moda de la distribución, y vemos como todas las diferentes distribuciones ZOIP dan un valor más grande a $\hat{p}_0$ que a $\hat{p}_1$ y vemos que en ZOIP-Beta se dan exactamente los mismos estimadores para $p_0$ y $p_1$ y entre la parametrizacion de R-S y F-C se da la misma estimación de $\mu$ ya que ambas equivalen al mismo parámetro así como se vio en la sección \ref{Sec_dist_prop}. Es muy bueno observar que todos los parámetros encontrados fueron altamente significativos y como sus graficas se acercan a la real excepto un poco en la proporción de valores inflados de uno. ver Figura \ref{Apli_Aju_ZOIP}.  
@@ -719,7 +718,7 @@ En la Figura \ref{Apli_Aju_ZOIP} se presenta gráficamente el ajuste de la distri
 
 \section{Conclusiones}
 
-La distribución ZOIP y el paquete \verb|ZOIP| de \proglang{R} permiten ajustar distribuciones para datos provenientes de porcentajes, tasas o proporciones que se encuentren inflados con ceros y/o unos, dicha distribución está compuesta por cuatro parámetros, que son estimados vía máxima verosimilitud y en el cual de acuerdo a los estudios de simulación realizados estos convergen a los valores reales con un tamaño de muestra relativamente pequeño, además se observa como la estimación de los parámetros de la parte continua no se ven afectados por el aumento de la presencia de ceros y unos en los datos, pero sí la estimación de los parámetros de la parte discreta. Por otra parte, se observa cómo el ajuste de la distribución ZOIP-beta explica el comportamiento de la distribución del porcentaje de utilización de una tarjeta de crédito en un banco.\\
+La distribución ZOIP y el paquete \verb|ZOIP| de \proglang{R} permiten ajustar distribuciones para datos provenientes de porcentajes, tasas o proporciones que se encuentren inflados con ceros y/o unos, dicha distribución está compuesta por cuatro parámetros, que son estimados vía máxima verosimilitud y en el cual de acuerdo a los estudios de simulación realizados estos convergen a los valores reales con un tamaño de muestra relativamente pequeño, además se observa como la estimación de los parámetros de la parte continua no se ven afectados por el aumento de la presencia de ceros y unos en los datos, pero sí la estimación de los parámetros de la parte discreta. Por otra parte, se observa cómo el ajuste de la distribución ZOIP-Beta explica el comportamiento de la distribución del porcentaje de utilización de una tarjeta de crédito en un banco.\\
 
 La distribución ZOIP y el paquete \verb|ZOIP| de \proglang{R} permiten de una manera muy versátil utilizar y ajustar diferentes parametrizaciones y distribuciones para datos proporcionales. Además permite Utilizar y ajustar distribuciones para datos proporcionales que se encuentran inflados solo con ceros o solo con unos, de una manera práctica.
 
