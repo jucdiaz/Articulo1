@@ -52,7 +52,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[maintitle = Paquete \pkg{ZOIP} de \proglang{R} para analizar datos proporcionales inflados con ceros y/o unos,
-       secondtitle = Package \pkg{ZOIP} of \proglang{R} to analyze proportional data inflated with zeros and / or ones,
+       secondtitle = Package \pkg{ZOIP} of \proglang{R} to analyze proportional data inflated with zeros and/or ones,
        shorttitle = Distribución ZOIP en \proglang{R}]       
 
 \begin{authors}
@@ -250,7 +250,40 @@ donde $p_{0} \geq 0$ y $p_{1} \geq 0$  representan la probabilidad que la variab
 
 donde $E^*(y)$ y $Var^*(y)$ denotan la esperanza y varianza asociados a la distribución $f(y;\mu,\sigma).$\\
 
-Si para la distribución $ZOIP(\mu, \sigma, p_0, p_1)$ se elige la distribución Beta con parametri- zación \citeasnoun{Ferrari2} entonces el parámetro $\sigma$ tomará el rol del parámetro $\phi$ de la distribución, si la parametrización es Beta $\mu$ y $\sigma$ tomarán el rol de $p$ y $q$ respectivamente. En las demás distribuciones y parametrizaciones $\mu$ y $\sigma$ tomaran los valores y dominios correspondientes a su distribución.\\
+\begin{table}[!hbt]
+{\scriptsize
+\begin{center}
+\caption{\textsl{Rol que toman los parámetros de la distribución ZOIP de acuerdo a la distribución y parametrización elegida.}}
+\begin{tabular}{|c|l|c|}\hline
+ Parámetro & Distribución/Parametrización & Rol en la distribución ZOIP\\ \hline
+
+\multirow{4}{*}{$\mu$}&ZOIP-Beta R-S & $\mu$ \\
+& ZOIP-Beta F-C & $\mu$	\\
+& ZOIP-Beta & $p$ 	 \\
+& ZOIP-simplex & $\mu$	\\ \hline
+
+\multirow{4}{*}{$\sigma$} &ZOIP-Beta R-S & $\sigma$ \\
+& ZOIP-Beta F-C& $\phi$\\
+& ZOIP-Beta & $q$\\
+& ZOIP-simplex &$\sigma$\\\hline
+
+\multirow{4}{*}{$p_0$} &ZOIP-Beta R-S & $p_0$	\\
+& ZOIP-Beta F-C &$p_0$	\\
+& ZOIP-Beta &$p_0$	\\
+& ZOIP-simplex &$p_0$\\ \hline
+
+\multirow{4}{*}{$p_1$} &ZOIP-Beta R-S 	&$p_1$\\
+& ZOIP-Beta F-C &$p_1$  \\
+& ZOIP-Beta &$p_1$	\\
+& ZOIP-simplex &$p_1$ \\ \hline
+\end{tabular}
+\label{T_ROLES_PAR}
+\end{center}
+}
+\end{table}
+
+
+En este artículo se plantea la distribución ZOIP-Beta bajo tres diferentes parametrizaciones, esto para que el usuario elija la parametrización más conveniente para su caso de estudio. En la tabla \ref{T_ROLES_PAR} se muestra el rol que toman los parámetros de $\mu$ y $\sigma$ de acuerdo con la elección de la parametrización de la distribución ZOIP-Beta, de este modo si la distribución $ZOIP-Beta(\mu, \sigma, p_0, p_1)$ es con pa\-ra\-me\-tri\-za\-ción \citeasnoun{Ferrari2} entonces el parámetro $\sigma$ tomará el rol del parámetro $\phi$ de la distribución y si la parametrización es ZOIP-Beta $\mu$ y $\sigma$ tomarán el rol de $p$ y $q$ respectivamente. En las demás distribuciones y parametrizaciones $\mu$ y $\sigma$ tomaran los valores y dominios correspondientes a su distribución.\\
 
 La distribución ZOIP se encuentra inflada con ceros y unos, es decir bilateralmente, pero existe la posibilidad que hayan casos de estudio en que se encuentren datos inflados con unos únicamente, por lo que $p_0=0$ y por lo tanto se estará llamando no una distribución ZOIP, sino una distribución OIP (Ones Inflated Proporcional) y si los datos se encuentran inflados con ceros únicamente, es decir $p_1=0$ se tendrá una distribución ZIP (Zeros Inflated Proporcional), si los datos no se encuentran inflados, entonces $p_0=p_1=0$ y la distribución ZOIP será una distribución para datos proporcionales clásica.\\
 
@@ -369,7 +402,7 @@ var(log(1-y))=E[log^2(1-y)]-(E[log(1-y)])^2=\psi^{'}(q)-\psi^{'}(p+q)>0
 \\
 ver más en \citeasnoun{Owen1}.\\
 
-Para encontrar las estimaciones de los parámetros de Beta en parametrizaciones de \citeasnoun{Ferrari2} y \citeasnoun{Stasinopoulos2}, basta con encontrar los estimadores MLE anteriores de la parametrización original y utilizar las ecuaciones definidas en \eqref{FC_Origin1}, \eqref{FC_Origin2} para el caso de \citeasnoun{Ferrari2} y \eqref{RS_Origin1}, \eqref{RS_Origin2} para el caso de \citeasnoun{Stasinopoulos2}.
+Para encontrar las estimaciones de los parámetros de Beta en parametrizaciones de \citeasnoun{Ferrari2} y \citeasnoun{Stasinopoulos2}, basta con encontrar los estimadores MLE anteriores de la parametrización clásica y utilizar las ecuaciones definidas en \eqref{FC_Origin1}, \eqref{FC_Origin2} para el caso de \citeasnoun{Ferrari2} y \eqref{RS_Origin1}, \eqref{RS_Origin2} para el caso de \citeasnoun{Stasinopoulos2}.
 
 \item \textbf{ZOIP-simplex}\\
 
@@ -574,7 +607,7 @@ As\'{\i} como la funci\'{o}n \code{summary} puede ser aplicada a un objeto de la
 \section{Estudio de simulación}
 En esta sección se realizó un estudio de simulación para observar la convergencia de la estimación de los parámetros de la distribución ZOIP para esto se analizan diferentes aspectos de la capacidad de estimación que tiene el método de máxima verosimilitud sobre los parámetros de la distribución ZOIP. Se generaron muestras de una distribución ZOIP bajo las diferentes distribuciones y parámetrizaciones con tamaños de muestra n de: 5, 10, 15, ..., 500, y se realizaron 1000 réplicas para cada tamaño de muestra, posteriormente se calculó la mediana de cada una de las estimaciones de los parámetros, y así poder analizar la capacidad de convergencia de las metodologías implementadas en la distribución ZOIP y en el paquete \verb|ZOIP|.\\
 
-En el primer escenario del estudio de simulación se generaron los datos de una distribución ZOIP-Beta$(\mu=0.6 ,\sigma=0.2 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Stasinopoulos2}, ZOIP-Beta$(\mu=0.6 , \sigma=24 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Ferrari2}, ZOIP-Beta$(\mu=14.4 , \sigma=9.6 , p_0=0.03 , p_1= 0.05)$ en la parametrización original, cabe aclarar que las tres parametrizaciones anteriores generan exactamente la misma distribución, esto gracias a las ecuaciones definidas en \eqref{FC_Origin1}, \eqref{FC_Origin2}, \eqref{RS_Origin1} y \eqref{RS_Origin2}, de igual manera se generó la misma cantidad de datos simulados para la distribución ZOIP-simplex$(\mu=0.4 , \sigma=0.2 , p_0=0.03 , p_1= 0.05)$.
+En el primer escenario del estudio de simulación se generaron los datos de una distribución ZOIP-Beta$(\mu=0.6 ,\sigma=0.2 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Stasinopoulos2}, ZOIP-Beta$(\mu=0.6 , \sigma=24 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Ferrari2}, ZOIP-Beta$(\mu=14.4 , \sigma=9.6 , p_0=0.03 , p_1= 0.05)$, cabe aclarar que las tres parametrizaciones anteriores generan exactamente la misma distribución, esto gracias a las ecuaciones definidas en \eqref{FC_Origin1}, \eqref{FC_Origin2}, \eqref{RS_Origin1} y \eqref{RS_Origin2}, de igual manera se generó la misma cantidad de datos simulados para la distribución ZOIP-simplex$(\mu=0.4 , \sigma=0.2 , p_0=0.03 , p_1= 0.05)$.
 
 
 \begin{figure}
@@ -623,25 +656,25 @@ En la Figura \ref{Simu_2} se presentan las estimaciones de los parámetros de la 
 \begin{tabular}{|c|l|cc|}\hline
  Parámetro & Caso & MAPE escenario 1 \% &  MAPE escenario 2 \% \\ \hline
 
-\multirow{4}{*}{$\mu$}&Caso R-S &0.61 & 0.86	\\
-& Caso F-C & 0.50	& 0.85	\\
-& Caso original &0.53 & 0.70	 \\
-& Caso simplex 	&0.47 & 0.63	\\ \hline
+\multirow{4}{*}{$\mu$}&ZOIP-Beta R-S &0.61 & 0.86	\\
+& ZOIP-Beta F-C & 0.50	& 0.85	\\
+& ZOIP-Beta&0.53 & 0.70	 \\
+& simplex &0.47 & 0.63	\\ \hline
 
-\multirow{4}{*}{$\sigma$} &Caso R-S &2.53 & 3.40\\
-& Caso F-C 	&5.10 & 6.90\\
-& Caso original &5.30 & 6.98\\
-& Caso simplex 	&5.30  &7.37 \\\hline
+\multirow{4}{*}{$\sigma$} &ZOIP-Beta R-S &2.53 & 3.40\\
+& ZOIP-Beta F-C 	&5.10 & 6.90\\
+& ZOIP-Beta &5.30 & 6.98\\
+& simplex &5.30  &7.37 \\\hline
 
-\multirow{4}{*}{$p_0$} &Caso R-S &20.5  & 5.36	\\
-& Caso F-C &19.7  & 5.42	\\
-& Caso original &19.8 & 5.43	\\
-& Caso simplex 	&20.8 & 5.51\\ \hline
+\multirow{4}{*}{$p_0$} &ZOIP-Beta R-S &20.5  & 5.36	\\
+& ZOIP-Beta F-C &19.7  & 5.42	\\
+& ZOIP-Beta &19.8 & 5.43	\\
+& simplex &20.8 & 5.51\\ \hline
 
-\multirow{4}{*}{$p_1$} &Caso R-S 	&15.2 & 7.28\\
-& Caso F-C &16.0 & 7.00  \\
-& Caso original &15.7	 & 7.00	\\
-& Caso simplex &16.2 & 7.12	 \\ \hline
+\multirow{4}{*}{$p_1$} &ZOIP-Beta R-S 	&15.2 & 7.28\\
+& ZOIP-Beta F-C &16.0 & 7.00  \\
+& ZOIP-Beta &15.7	 & 7.00	\\
+& simplex &16.2 & 7.12	 \\ \hline
 & Promedio & 10.57 & 5.26 \\ \hline
 \end{tabular}
 \label{T_MAPES}

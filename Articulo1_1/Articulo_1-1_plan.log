@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2016.3.24)  16 DEC 2017 14:16
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2016.3.24)  18 DEC 2017 22:38
 entering extended mode
 **Articulo_1-1_plan.tex
 ("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\Articulo_1-1_plan.tex"
@@ -697,52 +697,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--252
  []
 
 
-Overfull \hbox (5.18869pt too wide) in paragraph at lines 253--254
-[]\OT1/cmr/m/n/10 Si para la dis-tribu-cion $\OML/cmm/m/it/10 ZOIP\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; ; p[]; p[]\OT1/
-cmr/m/n/10 )$ se elige la dis-tribu-cion Be-ta con parametri-
+Overfull \hbox (11.86891pt too wide) in paragraph at lines 286--287
+[]\OT1/cmr/m/n/10 En este artcu-lo se plantea la dis-tribu-cion ZOIP-Beta ba-jo tres difer-entes parametriza-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
 File: Dist_ZOIP.eps Graphic file (type eps)
-<Dist_ZOIP.eps> [7]
-Underfull \hbox (badness 10000) in paragraph at lines 293--296
+<Dist_ZOIP.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 326--329
 
-[8]
-Overfull \hbox (37.94751pt too wide) detected at line 340
-[] \OT1/cmr/m/n/10 = [] [] + [] \OMS/cmsy/m/n/10   []   [] \OT1/cmr/m/n/10 = 0
- []
-
-
-Overfull \hbox (55.16966pt too wide) detected at line 343
-[] \OT1/cmr/m/n/10 = [] [] + [] \OMS/cmsy/m/n/10   []   [] \OT1/cmr/m/n/10 = 0
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 368--371
-
+Overfull \hbox (37.94751pt too wide) detected at line 373
+[] \OT1/cmr/m/n/10 = [] [] + [] \OMS/cmsy/m/n/10   []   [] \OT1/cmr/m/n/10 = 0
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
-
+Overfull \hbox (55.16966pt too wide) detected at line 376
+[] \OT1/cmr/m/n/10 = [] [] + [] \OMS/cmsy/m/n/10   []   [] \OT1/cmr/m/n/10 = 0
  []
 
 
-Overfull \hbox (36.48572pt too wide) detected at line 385
-\OML/cmm/m/it/10 `[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10  []\OML/cmm/m/it/10 log\O
-T1/cmr/m/n/10 (2\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   []\OML/cmm/m/it/10 log\OT1/cmr/m/n/10 (\OML/cmm/m
-/it/10 []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] [] []   [] []
+Underfull \hbox (badness 10000) in paragraph at lines 401--404
+
  []
 
 
@@ -750,31 +740,30 @@ Overfull \hbox (2.8672pt too wide) has occurred while \output is active
 \OT1/cmr/bx/n/10 10 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
  []
 
-[10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 433.
+
+Overfull \hbox (36.48572pt too wide) detected at line 418
+\OML/cmm/m/it/10 `[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10  []\OML/cmm/m/it/10 log\O
+T1/cmr/m/n/10 (2\OML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   []\OML/cmm/m/it/10 log\OT1/cmr/m/n/10 (\OML/cmm/m
+/it/10 []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] [] []   [] []
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 466.
 ("C:\Program Files (x86)\MiKTeX 2.8\tex\latex\base\ts1cmtt.fd"
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (2.8672pt too wide) has occurred while \output is active
@@ -782,15 +771,17 @@ Overfull \hbox (2.8672pt too wide) has occurred while \output is active
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 479--480
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
  []
 
 
-Underfull \vbox (badness 2469) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
- [13]
-Underfull \hbox (badness 10000) in paragraph at lines 526--527
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 512--513
 
  []
 
@@ -803,12 +794,7 @@ Overfull \hbox (2.8672pt too wide) has occurred while \output is active
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 565--566
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 567--568
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
 
  []
 
@@ -816,108 +802,111 @@ Underfull \hbox (badness 10000) in paragraph at lines 567--568
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-Underfull \hbox (badness 10000) in paragraph at lines 575--576
+Underfull \hbox (badness 10000) in paragraph at lines 598--599
 
  []
 
 
-Overfull \hbox (14.41933pt too wide) in paragraph at lines 577--578
-\OT1/cmr/m/n/10 Neto (2004), ZOIP-Beta$(\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = 14\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4\OML/c
-mm/m/it/10 ;  \OT1/cmr/m/n/10 = 9\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; p[] \OT1/cmr/m/n/10 = 0\OML/cmm/
-m/it/10 :\OT1/cmr/m/n/10 03\OML/cmm/m/it/10 ; p[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 05)$ en la parame
-trizacion
+Underfull \hbox (badness 10000) in paragraph at lines 600--601
+
  []
 
-File: Simulacion_RS_FC.eps Graphic file (type eps)
-<Simulacion_RS_FC.eps>
-File: Simulacion_Ori_Sim.eps Graphic file (type eps)
- <Simulacion_Ori_Sim.eps>
+
+Underfull \hbox (badness 10000) in paragraph at lines 608--609
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (2.8672pt too wide) has occurred while \output is active
 \OT1/cmr/bx/n/10 16 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
  []
 
-[16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+[16]
+File: Simulacion_RS_FC.eps Graphic file (type eps)
+ <Simulacion_RS_FC.eps>
+File: Simulacion_Ori_Sim.eps Graphic file (type eps)
+ <Simulacion_Ori_Sim.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Overfull \hbox (2.8672pt too wide) has occurred while \output is active
+\OT1/cmr/bx/n/10 18 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
+ []
+
+[18]
 File: Simulacion_RS_FC_Infla.eps Graphic file (type eps)
-<Simulacion_RS_FC_Infla.eps>
+ <Simulacion_RS_FC_Infla.eps>
 File: Simulacion_Ori_Sim_Infla.eps Graphic file (type eps)
  <Simulacion_Ori_Sim_Infla.eps>
 File: Mape_gnrl.eps Graphic file (type eps)
  <Mape_gnrl.eps>
 File: Mape_gnrl_infla.eps Graphic file (type eps)
- <Mape_gnrl_infla.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 656--657
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (2.8672pt too wide) has occurred while \output is active
-\OT1/cmr/bx/n/10 18 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
- []
-
-[18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 658--659
-
- []
-
-
+ <Mape_gnrl_infla.eps> [19]
 Overfull \hbox (2.8672pt too wide) has occurred while \output is active
 \OT1/cmr/bx/n/10 20 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
  []
 
 [20]
+Underfull \hbox (badness 10000) in paragraph at lines 689--690
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 691--692
+
+ []
+
 File: Hist_tdc.eps Graphic file (type eps)
- <Hist_tdc.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 702--703
+<Hist_tdc.eps> [21]
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
 
  []
 
-[21]
 File: Aplicacion_SC2.eps Graphic file (type eps)
- <Aplicacion_SC2.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 721--722
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+<Aplicacion_SC2.eps>
 Overfull \hbox (2.8672pt too wide) has occurred while \output is active
 \OT1/cmr/bx/n/10 22 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
  []
 
-[22] ("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\Articulo_1-1_plan.bbl"
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
+
+ []
+
+[23] ("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\Articulo_1-1_plan.bbl"
 Underfull \hbox (badness 1199) in paragraph at lines 9--9
 []| | \OT1/cmr/m/n/10 Cepeda-Cuervo, E., Jaimes, D., Marin, M. & Ro-jas, J. (2016), `Bayesian
  []
 
-[23]
+
 Underfull \hbox (badness 7540) in paragraph at lines 52--52
 []| | \OT1/cmr/m/n/10 Os-pina, R. & Fer-rari, S. (2010), `In-flat-ed be-ta dis-tri-bu-tions on-line:
  []
 
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 78.
-
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 739.
 
 Overfull \hbox (2.8672pt too wide) has occurred while \output is active
 \OT1/cmr/bx/n/10 24 \OT1/cmr/bx/n/8 Juan Camilo Daz Zapata, Freddy Hernandez Barajas & Olga Cecilia Usuga Manco
  []
 
 [24]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 739.
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 78.
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 772.
+ [25]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 772.
  ("D:\Juan Camilo\UN\Maestria en Ciencias Estadisticas\TESIS\Articulo1\Articulo1_1\Articulo_1-1_plan.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 739.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 772.
 Package rerunfilecheck Info: File `Articulo_1-1_plan.out' has not changed.
 (rerunfilecheck)             Checksum: D92236D11A45CA8C0D93E05F63B489C4;1122.
 
@@ -926,12 +915,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 9435 strings out of 495286
- 135359 string characters out of 3179895
- 315024 words of memory out of 3000000
- 12400 multiletter control sequences out of 15000+200000
+ 9436 strings out of 495286
+ 135372 string characters out of 3179895
+ 315157 words of memory out of 3000000
+ 12401 multiletter control sequences out of 15000+200000
  18577 words of font info for 71 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 54i,15n,35p,1486b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,15n,35p,1486b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Articulo_1-1_plan.dvi (24 pages, 113192 bytes).
+Output written on Articulo_1-1_plan.dvi (25 pages, 117048 bytes).
