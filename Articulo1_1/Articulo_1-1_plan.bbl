@@ -4,7 +4,7 @@
   Rojas}{2016}{Cepeda1}
 Cepeda-Cuervo, E., Jaimes, D., Marin, M. \harvardand\ Rojas, J.
   \harvardyearleft 2016\harvardyearright , `Bayesian beta regression with
-  bayesianbetareg r-package', {\em Computational Statistics} {\bf
+  bayesianbetareg \proglang{R}-package', {\em Computational Statistics} {\bf
   31}(1),~165--187.
 
 \harvarditem{Ferrari \harvardand\ Cribari-Neto}{2004}{Ferrari2}
@@ -83,19 +83,20 @@ Rigby, B. \harvardand\ Stasinopoulos, M.  \harvardyearleft
 
 \harvarditem{Rigby \harvardand\ Stasinopoulos}{2008}{Stasinopoulos1}
 Rigby, B. \harvardand\ Stasinopoulos, M.  \harvardyearleft
-  2008\harvardyearright , `Instructions on how to use the gamlss package in r',
-  {\em Computational statistics and Data analysis} {\bf 2},~194--195.
+  2008\harvardyearright , `Instructions on how to use the gamlss package in
+  \proglang{R}', {\em Computational statistics and Data analysis} {\bf
+  2},~194--195.
 
 \harvarditem[Zeileis et~al.]{Zeileis, Cribari-Neto \harvardand\
   Gr{\"u}n}{2010}{Zeileis1}
 Zeileis, A., Cribari-Neto, F. \harvardand\ Gr{\"u}n, B.  \harvardyearleft
-  2010\harvardyearright , `Beta regression in r', {\em Journal of statistical
-  software} {\bf 34}(2),~1--24.
+  2010\harvardyearright , `Beta regression in \proglang{R}', {\em Journal of
+  statistical software} {\bf 34}(2),~1--24.
 
 \harvarditem[Zhang et~al.]{Zhang, Qiu \harvardand\ Shi}{2016}{Zhang1}
 Zhang, P., Qiu, Z. \harvardand\ Shi, C.  \harvardyearleft 2016\harvardyearright
-  , `simplexreg: An r package for regression analysis of proportional data
-  using the simplex distribution', {\em Journal of Statistical Sftware} {\bf
-  71}(11).
+  , `simplexreg: An \proglang{R} package for regression analysis of
+  proportional data using the simplex distribution', {\em Journal of
+  Statistical Sftware} {\bf 71}(11).
 
 \end{thebibliography}

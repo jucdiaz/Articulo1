@@ -52,7 +52,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[maintitle = Paquete \pkg{ZOIP} de \proglang{R} para analizar datos proporcionales inflados con ceros y/o unos,
-       secondtitle = Package \pkg{ZOIP} of \proglang{R} to analyze proportional data inflated with zeros and/or ones,
+       secondtitle = \pkg{ZOIP} package in R to analyse inflated proportional data with zeros and/or ones,
        shorttitle = Distribución ZOIP en \proglang{R}]       
 
 \begin{authors}
@@ -76,13 +76,13 @@
 
 \begin{mainabstract}
 
-Los datos obtenidos a partir de  variables medidas bajo porcentajes, tasas y proporciones, son llamados datos proporcionales y estos se encuentran ubicados por lo general en el intervalo (0,1). Diferentes distribuciones se han desarrollado para caracterizar este tipo de variables, sin embargo existe la posibilidad que este tipo de variables puedan dar resultados de cero o uno. Haciendo que autores como \citeasnoun{Ospina1} y \citeasnoun{Stasinopoulos2} implementaran una distribución Beta inflada con ceros y/o unos, diferenciadas solo por su parametrización. Otros autores como \citeasnoun{Galvis1} han trabajo con otras distribuciones para datos proporcionales inflados, como la distribución simplex, sin embargo, no se ha encontrado una distribución que reúna las principales distribuciones para datos proporcionales inflados con ceros y/o unos, en este trabajo se presenta el paquete \verb|ZOIP| del sistema de computación \proglang{R} para la implementación de la distribución ZOIP (Zeros Ones Inflated Proportional) que reúne la distribución simplex y Beta bajo diferentes parametrizaciones y estima los parámetros de dicha distribución. La estimación de los parámetros de la distribución ZOIP se lleva acabo vía máxima verosimilitud. Se realizan estudios de simulación que muestran la convergencia satisfactoria de los parámetros y se presenta el ajuste de una distribución ZOIP a datos reales.
+Los datos obtenidos a partir de  variables medidas como porcentajes, tasas y proporciones. Son llamados datos proporcionales y estos se encuentran ubicados por lo general en el intervalo (0,1). Diferentes distribuciones se han desarrollado para ca\-rac\-te\-ri\-zar este tipo de variables, sin embargo existe la posibilidad que este tipo de variables puedan dar resultados de cero o uno. Haciendo que autores como \citeasnoun{Ospina1} y \citeasnoun{Stasinopoulos2} implementaran una distribución Beta inflada con ceros y/o unos, diferenciadas solo por su parametrización. Otros autores como \citeasnoun{Galvis1} han trabajo con otras distribuciones para datos proporcionales inflados, como la distribución simplex, sin embargo, no se ha encontrado una distribución que reúna las principales distribuciones para datos proporcionales inflados con ceros y/o unos, en este trabajo se presenta el paquete \verb|ZOIP| del sistema de computación \proglang{R} para la implementación de la distribución ZOIP (Zeros Ones Inflated Proportional) que reúne la distribución simplex y Beta bajo diferentes parametrizaciones y estima los parámetros de dicha distribución. La estimación de los parámetros de la distribución ZOIP se lleva acabo vía máxima verosimilitud. Se realizaron estudios de simulación que muestran la convergencia satisfactoria de los parámetros y se presenta el ajuste de una distribución ZOIP a datos reales.
 \keywords{Datos proporcionales, Distribución ZOIP, Máxima verosimilitud, \proglang{R}}
 \end{mainabstract}
 \newpage
 \begin{secondaryabstract}
-The data obtained from variables measured by percentages, rates and proportions are called proportional data which its values are usually between the (0,1) interval. Although, different distributions have been developed to characterize these variables, it is possible that some variables take the extreme values zero and one. Making authors such as \citeasnoun{Ospina1} and \citeasnoun{Stasinopoulos2} implement an inflated Beta distribution with zeros and/or ones, differentiated only by their parameterization. Other authors such as \citeasnoun{Galvis1} have worked with inflated proportional data, researchers have worked with other distributions such as simplex distributions. Nevertheless, it has not been found any distribution which combines the principals characteristic of several distributions for solving these issue. Thus, this paper presents the package Zeros Ones Inflated Proportional, \verb|ZOIP|, developed on the computation system \proglang{R}, which combines both Beta and simplex distribution and estimates its parameters given the parameters for the original distributions. Regarding the parameters estimations process, it is performed by maximum likelihood method. Finally, simulations studies have been performed which show the accuracy of the parameters convergence and the adjustment of a ZOIP distribution on real data.
-\keywords{Proportional data, ZOIP Distribution, Maximumn likelihood, \proglang{R}}
+Data obtained from variables measured as percentages, rates and proportions are called proportional data and these variables are usually within the (0,1) interval. Although, different distributions have been developed to characterize these variables, it is possible that some variables take the extreme values at zero and one. Some researchers as \citeasnoun{Ospina1} and \citeasnoun{Stasinopoulos2} proposed the inflated Beta distribution with zeros and/or ones, differentiated only by their parameterization. Other authors such as \citeasnoun{Galvis1} have worked with inflated proportional data, considering other distributions such as simplex distributions. Nevertheless, it has not been found any distribution which combines the main characteristic of several distributions for solving these issue. Thus, this paper presents the \verb|ZOIP| package (Zeros Ones Inflated Proportional), developed on the computation system \proglang{R}, this package combines both Beta and simplex distribution and estimates its parameters given the parameters for the original distributions. The parameters estimation process, is performed by maximum likelihood method. Finally, simulations studies have been performed which show the accuracy of the parameters convergence and the adjustment of a ZOIP distribution on real data.
+\keywords{Proportional data, ZOIP Distribution, Maximum likelihood, \proglang{R}}
 \end{secondaryabstract}
 
 %\cite -> \citeasnoun
@@ -90,41 +90,36 @@ The data obtained from variables measured by percentages, rates and proportions 
 
 \section{Introducción}
 
-En modelación estadística es posible encontrarnos con variables respuesta como proporciones, porcentajes o tasas que se encuentran en el intevalo (0, 1). La distribución más utilizada en la literatura para caracterizar este tipo de variables es la distribución Beta con soporte en el intervalo (0,1), la cual ha sido reparametrizada por autores como \citeasnoun{Ferrari2} y \citeasnoun{Stasinopoulos2}; otras distribuciones no tan comunes en la literatura, pero que caracterizan este tipo de variables son la distribución simplex \cite{Jorgensen1}, Beta-rectangular \cite{Hahn1} y la distribución LogitSep \cite{Hossain1}. Por otra parte, es común que los porcentajes o proporciones puedan dar valores iguales a cero o uno, representando la ausencia o presencia total de la característica de interés, respectivamente, las distribuciones descritas anteriormente no pueden ser admisibles para este tipos de variables, es por esto que se han desarrollado distribuciones infladas con ceros y/o unos, para tratar estos casos, como lo hizo \citeasnoun{Ospina2} quienes presentan una distribución Beta inflada en la que hacen una combinación entre una distribución discreta para la parte de los valores que pueden tomar cero o uno y una parte continua para los valores continuos entre cero y uno. \citeasnoun{Stasinopoulos2} incluyen dentro de sus modelos \textsl{gamlss} la distribución Beta inflada con ceros y/o unos según su parametrización.\\
+En modelación estadística es posible encontrarnos con variables respuesta como proporciones, porcentajes o tasas que se encuentran en el intevalo (0,1). La distribución más utilizada en la literatura para caracterizar este tipo de variables es la distribución Beta con soporte en el intervalo (0,1), la cual ha sido reparametrizada por autores como \citeasnoun{Ferrari2} y \citeasnoun{Stasinopoulos2}; otras distribuciones no tan comunes en la literatura, pero que caracterizan este tipo de variables son la distribución simplex \cite{Jorgensen1}, Beta-rectangular \cite{Hahn1} y la distribución LogitSep \cite{Hossain1}. Por otra parte, es común que los porcentajes o proporciones puedan dar valores iguales a cero o uno, re\-pre\-sen\-tan\-do la ausencia o presencia total de la característica de interés, respectivamente, las distribuciones descritas anteriormente no pueden ser admisibles para este tipos de variables, es por esto que se han desarrollado distribuciones infladas con ceros y/o unos, para tratar estos casos, como lo hizo \citeasnoun{Ospina2} quienes presentan una distribución Beta inflada en la que hacen una combinación entre una distribución discreta para la parte de los valores que pueden tomar cero o uno y una parte continua para los valores continuos entre cero y uno. \citeasnoun{Stasinopoulos2} incluyen dentro de sus modelos \textsl{gamlss} la distribución Beta inflada con ceros y/o unos según su parametrización.\\
 
-Esto ha dado pie para que diferentes autores hayan empezado a desarrollar diferentes modelos de regresión para tratar este tipo variables, \citeasnoun{Ospina1} propusieran una clase general de modelos de regresión Beta inflados con cero o uno, además \citeasnoun{Kosmidis1} han estudiado dichos modelos inflados recientemente, pero con una distribución distinta a la presentada por \citeasnoun{Ospina1}. \citeasnoun{Galvis1} presentan modelos de regresión para diferentes distribuciones para datos proporcionales inflados con ceros y/o unos mediante metodologías de estimación bayesianas.\\
+Esto ha dado pie para que diferentes autores hayan empezado a desarrollar di\-fe\-ren\-tes modelos de regresión para tratar este tipo variables, \citeasnoun{Ospina1} propusieran una clase general de modelos de regresión Beta inflados con cero o uno, además \citeasnoun{Kosmidis1} han estudiado dichos modelos inflados recientemente, pero con una distribución distinta a la presentada por \citeasnoun{Ospina1}. \citeasnoun{Galvis1} presentan modelos de regresión para diferentes distribuciones para datos proporcionales inflados con ceros y/o unos mediante metodologías de estimación bayesianas.\\
 
-Muchos autores han implementado distribuciones para datos proporcionales en el software estadístico \proglang{R}, \citeasnoun{Zeileis1} implementan el paquete \verb|betareg| donde se encuentran los modelos de regresión Beta propuestos por \citeasnoun{Ferrari2}.\\
+Muchos autores han implementado distribuciones para datos proporcionales en el software estadístico \proglang{R}, \citeasnoun{Zeileis1} implementan el paquete \verb|betareg| donde se encuentran los modelos de regresión Beta propuestos por \citeasnoun{Ferrari2}. \citeasnoun{Qiu1} implementan el paquete \verb|simplexreg| para realizar análisis de distribución y regresión sobre una distribución simplex, para datos proporcionales no inflados. \citeasnoun{Cepeda1} presentan la implementación de modelos de regresión Beta bajo un enfoque bayesiano utilizando el paquete \verb|Bayesianbetareg|. Otros autores como \citeasnoun{Stasinopoulos1} incluyen en el paquete \verb|gamlss| la distribución Beta inflada con ceros y/o unos y la posibilidad de realizar modelos de regresión sobre ellos.\\
 
-\citeasnoun{Qiu1} implementan el paquete \verb|simplexreg| para realizar análisis de distribución y regresión sobre una distribución simplex, para datos proporcionales no inflados.\\
-
-\citeasnoun{Cepeda1} Presentan la implementación de modelos de regresión Beta bajo un enfoque bayesiano utilizando el paquete \verb|Bayesianbetareg|.\\
-
-Otros autores como \citeasnoun{Stasinopoulos1} incluyen en el paquete \verb|gamlss| la distribución Beta inflada con ceros y/o unos y la posibilidad de realizar modelos de regresión sobre ellos.\\
-
-Aunque muchos autores han implementado las distribuciones para datos proporcionales inflados con ceros y/o unos, ninguno ha presentado una propuesta como la de reunir en una sola distribución las diferentes distribuciones para datos proporcionales y sus diferentes parametrizaciones, además de implementarla en un solo paquete, como se presenta en el paquete \verb|ZOIP| en \citeasnoun{R} disponible en el repositorio web \verb|GitHub|, \url{https://github.com/jucdiaz/ZOIP}.\\
+Aunque muchos autores han implementado las distribuciones para datos proporcionales inflados con ceros y/o unos, ninguno ha presentado una propuesta como la de reunir en una sola distribución las diferentes distribuciones para datos proporcionales y sus diferentes parametrizaciones, además de implementarla en un solo paquete, como se presenta en el paquete \verb|ZOIP| en \citeasnoun{R}.\\
+%disponible en el repositorio web \verb|GitHub|, \url{https://github.com/jucdiaz/ZOIP}.\\
 
 El artículo se encuentra organizado de la siguiente manera: primero se presentan las distribuciones más representativas para datos proporcionales, en la sección 3 se presenta la distribución para datos proporcionales inflados con ceros y/o unos ZOIP (Zeros Ones Inflated Proportional), seguido por el desarrollo analítico de la estimación de los parámetros de la distribución ZOIP vía máxima verosimilitud, en la sección 5 se aplica el ajuste de una distribución ZOIP en un estudio de simulación y para datos reales, por último se presenta el paquete \verb|ZOIP|.
 
 \section{Distribución para datos proporcionales} \label{Sec_dist_prop}
 
-Para los casos de modelación donde la variable de interés es una proporción, \\un porcentaje o una tasa. En la mayoría de los casos, este tipo de variables no pueden ser analizadas con la distribución normal, debido a que el soporte de la normal es la recta real $\mathbb{R}$, además en este tipo de variables es común la asimetría e incluso la bimodalidad, por esta razón en la literatura estadística se han propuesto distribuciones para este tipo de comportamientos, como la distribución Beta, que cuenta con diferentes parametrizaciones (\citeasnoun{Ferrari2} y \citeasnoun{Stasinopoulos2}) y la distribución simplex propuesta por \citeasnoun{Barndorff1}. De igual manera otras distribuciones más particulares como la Beta-rectangular \cite{Hahn1} y LogitSep \cite{Hossain1} se acoplan a este comportamiento, a continuación se mostraran las funciones de densidad de probabilidad, la media, la varianza y dependencias de algunas de las distribuciones mencionadas anteriormente.
+Por lo general en los casos de modelación donde la variable de interés es una proporción, un porcentaje o una tasa no se suelen ser analizadas con la distribución normal, debido a que el soporte de la normal es la recta real $\mathbb{R}$, además en este tipo de variables es común la asimetría e incluso la bimodalidad, por esta razón en la literatura estadística se han pro\-pu\-es\-to distribuciones para este tipo de comportamientos, como la distribución Beta, que cuenta con diferentes parametrizaciones (\citeasnoun{Ferrari2} y \citeasnoun{Stasinopoulos2}) y la distribución simplex propuesta por \citeasnoun{Barndorff1}. De igual manera otras distribuciones más particulares como la Beta-rectangular \cite{Hahn1} y LogitSep \cite{Hossain1} se acoplan a este comportamiento, a continuación se mostraran las funciones de densidad de probabilidad, la media, la varianza y dependencias de algunas de las distribuciones mencionadas anteriormente.
 
 \subsection{Distribución Beta} %original}
 
-Si una variable aleatoria $y$ definida entre cero y uno, tiene distribución Beta con parámetros $p$ y $q$ se acostumbra a denotarla por $Y \sim$ Be$(p,q)$ y la función de densidad de probabilidad de la distribución es dada por:
+Si una variable aleatoria $Y$ definida entre cero y uno, tiene distribución Beta con parámetros $p$ y $q$ se acostumbra a denotarla por $Y \sim$ Be$(p,q)$ y la función de densidad de probabilidad de la distribución es dada por:
 \begin{equation}
-f(y;p,q)=\frac{\Gamma(p+q)}{\Gamma(p)\Gamma(q)}y^{p-1}(1-y)^{q-1}
+f(y;p,q)=\frac{\Gamma(p+q)}{\Gamma(p)\Gamma(q)}y^{p-1}(1-y)^{q-1},
 \end{equation}
 
-donde los parámetros $p>0$, $q>0$ y $\Gamma(\cdot)$ es la función gamma. El valor esperado y la varianza de \textit{y} están dadas por:
+donde los parámetros $p>0$, $q>0$ y $\Gamma(\cdot)$ es la función gamma. El valor esperado y la varianza de $Y$ están dadas por:
 
 \begin{align}
 \begin{split}
-	E(y) &= \frac{p}{p+q} 
+	E(Y) &= \frac{p}{p+q} 
 \end{split} \label{E_Origin} \\
 \begin{split}
-	Var(y) &= \frac{pq}{(p+q)^2(p+q+1)}
+	Var(Y) &= \frac{pq}{(p+q)^2(p+q+1)}
 \end{split} \label{V_Origin}
 \end{align}
 
@@ -132,21 +127,21 @@ donde los parámetros $p>0$, $q>0$ y $\Gamma(\cdot)$ es la función gamma. El valo
 \subsection{Distribución Beta parametrización Ferrari y Cribari-Neto (2004)}
 
 
-\citeasnoun{Ferrari2} propusieron otra parametrización para la distribución Beta en función de los parámetos $\mu$ y $\phi$ donde $\mu$ corresponde a la media de la distribución y $\phi$ es interpretado como un parámetro de precisión. Si $0<y<1$ y $Y \sim$ Be$(\mu,\phi)$ la función de densidad de probabilidad de la distribución está dada por:
+\citeasnoun{Ferrari2} propusieron otra parametrización para la distribución Beta en función de los parámetos $\mu$ y $\phi$ donde $\mu$ corresponde a la media de la distribución y $\phi$ es interpretado como un parámetro de precisión. Si $0<Y<1$ y $Y \sim$ Be$(\mu,\phi)$ la función de densidad de probabilidad de la distribución está dada por:
 \begin{equation}
 f(y;\mu,\phi)=\frac{\Gamma(\phi)}{\Gamma(\mu\phi)\Gamma((1-\mu)\phi)}y^{\mu\phi-1}(1-y)^{(1-\mu)\phi-1}
 \end{equation}
 
-donde $0<\mu<1$ y $\phi>0$. El valor esperado y la varianza de \textit{y} están dados por:
+donde $0<\mu<1$ y $\phi>0$. El valor esperado y la varianza de $Y$ están dados por:
 
 % Si $\mu=1/2$ la distribución es simétrica y si $\mu\neq1/2$ es asimétrica, además cuando $\mu=1/2$ y $\phi=2$ se convierte en la distribución uniforme y para valores más grandes de $\phi$ la varianza de $y$ es más pequeña
 
 \begin{align}
 \begin{split}
-	E(y) &= \mu 
+	E(Y) &= \mu 
 \end{split} \label{E_FC} \\
 \begin{split}
-	Var(y) &= \frac{\mu(1-\mu)}{1+\phi}
+	Var(Y) &= \frac{\mu(1-\mu)}{1+\phi}
 \end{split} \label{V_FC}
 \end{align}
 
@@ -163,7 +158,7 @@ q &= (1-\mu)\phi
 
 \subsection{Distribución Beta parametrización Rigby y Stasinopoulos (2005)}
 
-\citeasnoun{Stasinopoulos2} propusieron una nueva parametrización para la distribución Beta con parámetros $\mu$ y $\sigma$ donde $\mu$ es la media de la distribución y $\sigma$ es interpretado como un parámetro de dispersión, se dice que $Y \sim$ Be$(\mu,\sigma)$ con $0<y<1$, si la función de densidad de probabilidad de la distribución está dada por:
+\citeasnoun{Stasinopoulos2} propusieron una nueva parametrización para la distribución Beta con parámetros $\mu$ y $\sigma$ donde $\mu$ es la media de la distribución y $\sigma$ es interpretado como un parámetro de dispersión, se dice que $Y \sim$ Be$(\mu,\sigma)$ con $0<Y<1$, si la función de densidad de probabilidad de la distribución está dada por:
 
 \begin{equation}
 f(y;\mu,\sigma)=B(\mu,\sigma)y^{\mu((1-\sigma^2)/\sigma^2)-1}(1-y)^{(1-\mu)((1-\sigma^2)/\sigma^2)-1}
@@ -171,14 +166,14 @@ f(y;\mu,\sigma)=B(\mu,\sigma)y^{\mu((1-\sigma^2)/\sigma^2)-1}(1-y)^{(1-\mu)((1-\
 
 donde $B(\mu,\sigma)=\frac{\Gamma((1-\sigma^2)/\sigma^2)}{\Gamma(\mu((1-\sigma^2)/\sigma^2))\Gamma((1-\mu)((1-\sigma^2)/\sigma^2))},$\\
 
-donde $0<\mu<1$ y $0<\sigma<1$. La media y la varianza de \textit{y} están dadas por:
+donde $0<\mu<1$ y $0<\sigma<1$. La media y la varianza de $Y$ están dadas por:
 
 \begin{align}
 \begin{split}
-	E(y) &= \mu 
+	E(Y) &= \mu 
 \end{split} \label{E_RS} \\
 \begin{split}
-	Var(y) &= \sigma^2\mu(1-\mu)
+	Var(Y) &= \sigma^2\mu(1-\mu)
 \end{split} \label{V_RS}
 \end{align}
 
@@ -195,7 +190,7 @@ q &= \frac{(1-\mu)(1-\sigma^2)}{\sigma^2}
 
 \subsection{Distribución simplex}
 
-La distribución simplex fue introducida por \citeasnoun{Barndorff1} y es un caso particular de los modelos de dispersión propuestos por \citeasnoun{Jorgensen1}, dicha distribución depende de los parámetros $\mu$ que corresponde a la media de la distribución y $\sigma^2$ que corresponde a un parámetro de dispersión. Si $0<y<1$ y $Y \sim S^{-}(\mu, \sigma^2)$ la función de densidad de probabilidad esta dada por:
+La distribución simplex fue introducida por \citeasnoun{Barndorff1} y es un caso particular de los modelos de dispersión propuestos por \citeasnoun{Jorgensen1}, dicha distribución depende de los parámetros $\mu$ que corresponde a la media de la distribución y $\sigma^2$ que corresponde a un parámetro de dispersión. Si $0<Y<1$ y $Y \sim S^{-}(\mu, \sigma^2)$ la función de densidad de probabilidad esta dada por:
 
 \begin{equation}
 f(y;\mu,\sigma^2)=\left\{2\pi\sigma^2[y(1-y)]^3\right\}^{-1/2}\exp\left\{-\frac{y(1-y)\mu^2(1-\mu)^2}{2\sigma^2(y-\mu)^2}\right\}
@@ -205,11 +200,11 @@ donde $0<\mu<1$ y $\sigma>0$. Además el valor esperado y la varianza están dadas
 
 \begin{align}
 \begin{split}
-	E(y) &= \mu 
+	E(Y) &= \mu 
 \end{split} \label{E_Simplex} \\
 \begin{split}
 	\tau^2 &= \mu(1-\mu)-\frac{1}{\sqrt{2\sigma^2}}\exp\left\{\frac{1}{2\sigma^2\mu^2(1-\mu)^2}\right\}\Gamma\left\{\frac{1}{2},\frac{1}{2\sigma^2\mu^2(1-\mu)^2}\right\}\\
-	Var(y) &= 1/\tau^2
+	Var(Y) &= 1/\tau^2
 \end{split} \label{V_Simplex}
 \end{align}
 
@@ -221,7 +216,7 @@ En las distribuciones vistas en la sección \ref{Sec_dist_prop}, se evidenciaron 
 
 La distribución para datos proporcionales inflados con ceros y/o unos se compone de la mezcla de tres distribuciones, dos de ellas discretas, que son distribuciones degeneradas en cero y uno, y una tercera distribución continua que además es una función de densidad de probabilidad para datos proporcionales, como las presentadas anteriormente.\\
 
-Si la variable aleatoria $y$ tiene distribución ZOIP con parámetros $\mu$, $\sigma$, $p_0$ y $p_1$, se denotará como \\
+Si la variable aleatoria $Y$ tiene distribución ZOIP con parámetros $\mu$, $\sigma$, $p_0$ y $p_1$, se denotará como \\
 $Y \sim$ ZOIP$(\mu,\sigma, p_0, p_1)$, la función de densidad de probabilidad está dado por:
 
 \begin{equation}
@@ -237,18 +232,18 @@ p_{1} & \text{si}\ y=1,\\
 donde $p_{0} \geq 0$ y $p_{1} \geq 0$  representan la probabilidad que la variable aleatoria $Y$ sea igual a cero y uno, respectivamente, además $0\leq p_{0}+p_{1}\leq 1$ y $f(y;\mu,\sigma)$ representa alguna de las funciones de densidad de probabilidad para datos proporcionales, descritas en la sección anterior. La media y varianza de $y$, están dadas por
 
 \begin{equation}
-	E(y) = p_1+(1-p_0-p_1)E^*(y)
+	E(Y) = p_1+(1-p_0-p_1)E^*(Y)
 \end{equation}
 
 \begin{multline}
-	Var(y) = p_1(1-p1)+\\
-	+(1-p_0-p_1)\left[Var^*(y)+(p_0+p_1)[E^*(y)]^2-2E^*(y)p_1\right]
+	Var(Y) = p_1(1-p1)+\\
+	+(1-p_0-p_1)\left[Var^*(Y)+(p_0+p_1)[E^*(Y)]^2-2E^*(Y)p_1\right]
 \end{multline}
 
 
 %donde $E^*(y)$ es el valor esperado de una distribución para datos proporcionales como las descritas en \eqref{E_Origin}, \eqref{E_FC}, \eqref{E_RS} y \eqref{E_Simplex}. Además la $Var^*(y)$ es la varianza de una distribución para datos proporcionales como se muestra en  \eqref{V_Origin}, \eqref{V_FC}, \eqref{V_RS} y \eqref{V_Simplex}.\\%
 
-donde $E^*(y)$ y $Var^*(y)$ denotan la esperanza y varianza asociados a la distribución $f(y;\mu,\sigma).$\\
+donde $E^*(Y)$ y $Var^*(Y)$ denotan la esperanza y varianza asociados a la distribución $f(y;\mu,\sigma).$\\
 
 \begin{table}[!hbt]
 {\scriptsize
@@ -283,11 +278,11 @@ donde $E^*(y)$ y $Var^*(y)$ denotan la esperanza y varianza asociados a la distr
 \end{table}
 
 
-En este artículo se plantea la distribución ZOIP-Beta bajo tres diferentes parametrizaciones, esto para que el usuario elija la parametrización más conveniente para su caso de estudio. En la tabla \ref{T_ROLES_PAR} se muestra el rol que toman los parámetros de $\mu$ y $\sigma$ de acuerdo con la elección de la parametrización de la distribución ZOIP-Beta, de este modo si la distribución $ZOIP-Beta(\mu, \sigma, p_0, p_1)$ es con pa\-ra\-me\-tri\-za\-ción \citeasnoun{Ferrari2} entonces el parámetro $\sigma$ tomará el rol del parámetro $\phi$ de la distribución y si la parametrización es ZOIP-Beta $\mu$ y $\sigma$ tomarán el rol de $p$ y $q$ respectivamente. En las demás distribuciones y parametrizaciones $\mu$ y $\sigma$ tomaran los valores y dominios correspondientes a su distribución.\\
+En este artículo se plantea la distribución ZOIP-Beta bajo tres diferentes pa\-ra\-me\-tri\-za\-cio\-nes, esto para que el usuario elija la parametrización más conveniente para su caso de estudio. En la tabla \ref{T_ROLES_PAR} se muestra el rol que toman los parámetros de $\mu$ y $\sigma$ de acuerdo con la elección de la parametrización de la distribución ZOIP-Beta, de este modo si la distribución ZOIP-Beta$(\mu, \sigma, p_0, p_1)$ es con pa\-ra\-me\-tri\-za\-ción \citeasnoun{Ferrari2} entonces el parámetro $\sigma$ tomará el rol del parámetro $\phi$ de la distribución y si la parametrización es ZOIP-Beta $\mu$ y $\sigma$ tomarán el rol de $p$ y $q$ respectivamente. En las demás distribuciones y parametrizaciones $\mu$ y $\sigma$ tomarán los valores y dominios correspondientes a su distribución.\\
 
 La distribución ZOIP se encuentra inflada con ceros y unos, es decir bilateralmente, pero existe la posibilidad que hayan casos de estudio en que se encuentren datos inflados con unos únicamente, por lo que $p_0=0$ y por lo tanto se estará llamando no una distribución ZOIP, sino una distribución OIP (Ones Inflated Proporcional) y si los datos se encuentran inflados con ceros únicamente, es decir $p_1=0$ se tendrá una distribución ZIP (Zeros Inflated Proporcional), si los datos no se encuentran inflados, entonces $p_0=p_1=0$ y la distribución ZOIP será una distribución para datos proporcionales clásica.\\
 
-En la Figura \ref{Dist_ZOIP} se muestran las densidades para algunas distribuciones ZOIP-Beta en sus diferentes parametrizaciones y ZOIP-simplex, es de aclarar que, en las Figuras ubicadas en la esquina superior izquierda, esquina superior derecha y esquina inferior izquierda, los valores de los parámetros son diferentes, pero dan como resultado la misma distribución gracias a las ecuaciones descritas en \eqref{FC_Origin1}, \eqref{FC_Origin2} para el caso \citeasnoun{Ferrari2} y \eqref{RS_Origin1}, \eqref{RS_Origin2} para el caso \citeasnoun{Stasinopoulos2}. Además se puede observar en la Figura 1d. como la distribución ZOIP-simplex hereda el comportamiento  bimodal de la distribución clásica simplex, con valores mínimo y máximo en cero y uno respectivamente. 
+En la Figura \ref{Dist_ZOIP} se muestran las densidades para algunas distribuciones ZOIP-Beta en sus diferentes parametrizaciones y ZOIP-simplex, es de aclarar que, en las Figuras ubicadas en la esquina superior izquierda, esquina superior derecha y esquina inferior izquierda, los valores de los parámetros son diferentes, pero dan como resultado la misma distribución gracias a las ecuaciones descritas en \eqref{FC_Origin1}, \eqref{FC_Origin2} para el caso \citeasnoun{Ferrari2} y \eqref{RS_Origin1}, \eqref{RS_Origin2} para el caso \citeasnoun{Stasinopoulos2}. Además se puede observar en la Figura inferior derecha como la distribución ZOIP-simplex hereda el comportamiento  bimodal de la distribución clásica simplex, con valores mínimo y máximo en cero y uno respectivamente. 
 
 \begin{figure}
 	\begin{center}
@@ -361,29 +356,29 @@ Análogamente, se tiene que:
 Ahora se halla MLE para los parámetros del componente continuo de la función.
 
 \[
-\ell_3(p,q)=\sum_{\left\{i:y_i \in (0,1)\right\}}{log(f(p,q|y_i))}=n log(\Gamma(p+q))-n log(\Gamma(p))-n log(\Gamma(q))
+\ell_3(p,q)=\sum_{\left\{i:y_i \in (0,1)\right\}}{\log(f(p,q|y_i))}=n \log(\Gamma(p+q))-n \log(\Gamma(p))-n \log(\Gamma(q))
 \]
 \[
-+(p-1)\sum_{\left\{i:y_i \in (0,1)\right\}}{log(y_i)}+(q-1)\sum_{i=1:y_i \in (0,1)}^{n}{log(1-y_i)}
++(p-1)\sum_{\left\{i:y_i \in (0,1)\right\}}{\log(y_i)}+(q-1)\sum_{i=1:y_i \in (0,1)}^{n}{\log(1-y_i)}
 \]
 \\
 entonces
 \[
-\frac{\partial \ell_3(p,q)}{\partial p}=\sum_{\left\{i:y_i \in (0,1)\right\}}{log(y_i)}+\frac{n \cdot \partial log(\Gamma(p+q))}{\partial p}- \frac{n \cdot \partial log(\Gamma(p))}{\partial p}-\frac{n\cdot \partial log(\Gamma(q))}{\partial p}=0
+\frac{\partial \ell_3(p,q)}{\partial p}=\sum_{\left\{i:y_i \in (0,1)\right\}}{\log(y_i)}+\frac{n \cdot \partial \log(\Gamma(p+q))}{\partial p}- \frac{n \cdot \partial \log(\Gamma(p))}{\partial p}-\frac{n\cdot \partial \log(\Gamma(q))}{\partial p}=0
 \]
 \[
-\frac{\partial \ell_3(p,q)}{\partial q}=\sum_{\left\{i:y_i \in (0,1)\right\}}{log(1-y_i)}+\frac{n \cdot \partial log(\Gamma(p+q))}{\partial q}- \frac{n \cdot \partial log(\Gamma(p))}{\partial q}-\frac{n\cdot \partial log(\Gamma(q))}{\partial q}=0
+\frac{\partial \ell_3(p,q)}{\partial q}=\sum_{\left\{i:y_i \in (0,1)\right\}}{\log(1-y_i)}+\frac{n \cdot \partial \log(\Gamma(p+q))}{\partial q}- \frac{n \cdot \partial \log(\Gamma(p))}{\partial q}-\frac{n\cdot \partial \log(\Gamma(q))}{\partial q}=0
 \]
 
 \[
-\frac{\partial \ell_3(p,q)}{\partial p}=\sum_{\left\{i:y_i \in (0,1)\right\}}{log(y_i)}-n(-\psi(p+q)+\psi(p))=0
+\frac{\partial \ell_3(p,q)}{\partial p}=\sum_{\left\{i:y_i \in (0,1)\right\}}{\log(y_i)}-n(-\psi(p+q)+\psi(p))=0
 \]
 \[
-\frac{\partial \ell_3(p,q)}{\partial q}=\sum_{\left\{i:y_i \in (0,1)\right\}}{log(1-y_i)}-n(-\psi(p+q)+\psi(q))=0
+\frac{\partial \ell_3(p,q)}{\partial q}=\sum_{\left\{i:y_i \in (0,1)\right\}}{\log(1-y_i)}-n(-\psi(p+q)+\psi(q))=0
 \]
 \\
-donde $\psi(\cdot)={\Gamma '{(\cdot)}}/{\Gamma(\cdot)}$
-\\
+donde $\psi(\cdot)={\Gamma '{(\cdot)}}/{\Gamma(\cdot)}$\\
+
 Este sistema de ecuaciones no tiene una solución de forma cerrada, por lo que para encontrar los MLE de $p$ y $q$ es necesario utilizar algoritmos iterativos, por ejemplo el método de Newton Raphson, mínimos cuadrados ponderados. En el paquete \verb|ZOIP| se utiliza optimizadores a la función de verosimilitud mediante la función \code{nlminb} o \code{optim} de \proglang{R}, basadas en las funciones de Fortran \code{drmnfb}, \code{drmngb}, \code{drmnhb} y el metodo de Nelder y Mead, respectivamente, sin embargo, se puede garantizar que los puntos críticos encontrados serán máximos de la función de verosimilitud, ya que si hallamos la segunda derivada de la función se tiene que:
 \[
 \frac{\partial^2 \ell_3(p,q)}{\partial p^2}=-n(\psi^{'}(p)-\psi^{'}(p+q))<0
@@ -394,10 +389,10 @@ Este sistema de ecuaciones no tiene una solución de forma cerrada, por lo que pa
 \\
 debido que la varianza de la transformación logarítmica de la variable es:
 \[
-var(log(y))=E[log^2(y)]-(E[log(y)])^2=\psi^{'}(p)-\psi^{'}(p+q)>0
+var(\log(y))=E[\log^2(y)]-(E[\log(y)])^2=\psi^{'}(p)-\psi^{'}(p+q)>0
 \]
 \[
-var(log(1-y))=E[log^2(1-y)]-(E[log(1-y)])^2=\psi^{'}(q)-\psi^{'}(p+q)>0
+var(\log(1-y))=E[\log^2(1-y)]-(E[\log(1-y)])^2=\psi^{'}(q)-\psi^{'}(p+q)>0
 \]
 \\
 ver más en \citeasnoun{Owen1}.\\
@@ -409,19 +404,19 @@ Para encontrar las estimaciones de los parámetros de Beta en parametrizaciones d
 Para este caso la única diferencia con respecto al caso anterior es la estimación en el componente continuo, por lo tanto.
 
 \[
-L_3(\mu,\sigma)=\prod_{\left\{i:y_i \in (0,1)\right\}}\left[{2\pi \sigma^{2}[y_i(1-y_i)]^{3}}\right]^{-1/2}exp\left(-\frac{1}{2\sigma^2}d(y_i;\mu)\right)
+L_3(\mu,\sigma)=\prod_{\left\{i:y_i \in (0,1)\right\}}\left[{2\pi \sigma^{2}[y_i(1-y_i)]^{3}}\right]^{-1/2}\exp\left(-\frac{1}{2\sigma^2}d(y_i;\mu)\right),
 \]
 \\
-donde $d(y_i ;\mu)=\frac{y_i(1-y_i)\mu^2(1-\mu)^2}{(y_i-\mu)^2}$
+donde $d(y_i ;\mu)=\frac{y_i(1-y_i)\mu^2(1-\mu)^2}{(y_i-\mu)^2}$.
 \[
-\ell_3(\mu,\sigma)=-\frac{n}{2}log(2\pi)-\frac{n}{2}log(\sigma^2)-\frac{3}{2}\sum_{\left\{i:y_i \in (0,1)\right\}}{log(y_i(1-y_i))}-\sum_{\left\{i:y_i \in (0,1)\right\}}{\frac{1}{2\sigma^2}d(y_i;\mu)}
+\ell_3(\mu,\sigma)=-\frac{n}{2}\log(2\pi)-\frac{n}{2}\log(\sigma^2)-\frac{3}{2}\sum_{\left\{i:y_i \in (0,1)\right\}}{\log(y_i(1-y_i))}-\sum_{\left\{i:y_i \in (0,1)\right\}}{\frac{1}{2\sigma^2}d(y_i;\mu)}
 \]
 
 \[
 \frac{\partial \ell_3(\mu,\sigma)}{\partial \sigma}=-\frac{n}{\sigma}+\frac{1}{\sigma^3}\sum_{\left\{i:y_i \in (0,1)\right\}}{d(y_i;\mu)}=\sigma(-n\sigma^2+\sum_{\left\{i:y_i \in (0,1)\right\}}{d(y_i;\mu))}=0
 \]
 \\
-El valor de $\sigma=0$, no es posible, por lo tanto:
+El valor de $\sigma=0$ no es posible, por lo tanto:
 \[
 -n\sigma^2+\sum_{i=1:y_i \in (0,1)}^{n}{d(y_i;\mu)}=0
 \]
@@ -434,7 +429,7 @@ El estimador MLE de $\sigma^2$ depende del valor estimado en $\mu$, entonces:
 \frac{\partial \ell_3(\mu,\sigma)}{\partial \sigma}=-\frac{1}{2\sigma^2}\sum_{i=1:y_i \in (0,1)}^{n}{\frac{\partial d(y_i;\mu)}{\partial\mu}}=0
 \]
 \\
-donde:
+donde
 \begin{multline*}
 \frac{\partial d(y_i;\mu)}{\partial\mu}=\sum_{i=1:y_i \in (0,1)}^{n}\frac{y_i(1-y_i)\mu^2(1-\mu)^2}{2(y_i-\mu)^3}\\
 +\frac{2y_i(1-y_i)\mu(1-\mu)^2-2y_i(1-y_i)\mu^2(1-\mu)}{(y_i-\mu)^2}=0
@@ -446,13 +441,17 @@ No tiene una solución cerrada analíticamente, entonces se deben utilizar algorit
 
 \section{Paquete ZOIP}
 
-En esta sección se presenta el paquete \verb|ZOIP| de \proglang{R} alojado en \verb|GitHub| y creado por los autores para analizar datos proporcionales inflados con ceros y/o unos y ajustar una distribución ZOIP.
+En esta sección se presenta el paquete \verb|ZOIP| de \proglang{R} alojado en el \verb|CRAN| y en \verb|GitHub| y creado por los autores para analizar datos proporcionales inflados con ceros y/o unos y ajustar una distribución ZOIP.
 
 \subsection{Instalación}
 
-Para acceder a la última versión del paquete \verb|ZOIP|, se debe ingresar al repositorio de códigos \verb|GitHub|, el cual es un alojamiento de repositorios Git, para obtener dicha versión es necesario ejecutar el siguiente código que instala el paquete \verb|devtools|, que es necesario para descargar el paquete \verb|ZOIP|.
+Para acceder a la última versión del paquete \verb|ZOIP| se puede ingresar al repositorio \verb|CRAN|, donde se encuentra disponible. Otra opcion es instalar la version en de\-sa\-rro\-llo desde \verb|GitHub|, el cual es un alojamiento de repositorios Git, para obtener dicha versión es necesario ejecutar el siguiente código que instala el paquete \verb|devtools|, que es necesario para descargar el paquete \verb|ZOIP| desde \verb|GitHub|.
 
 \begin{verbatim}
+#Para instalar la versión disponible en el CRAN
+install.packages("ZOIP")
+
+#Para instalar la versión en desarrollo desde HitHub
 if (!require("devtools")) install.packages("devtools")
 devtools::install_github("jucdiaz/ZOIP", force = TRUE)
 library(ZOIP) # Carga el paquete
@@ -481,7 +480,7 @@ qZOIP(p=0.7, mu=0.6, sigma=2.4, p0=0.2, p1=0, family='Original')
 ##[1] 0.2061418
 \end{verbatim}
 
-Por último se generan 8 valores aleatorios de una distribución ZOIP-simplex descrita como $\text{ZOIP}(\mu=0.6, \, \sigma=3, \, p_0=0.2, \, p_1=0.2)$. La función \code{set.seed} tiene como fin garantizar la repetición de los valores aleatorios generados en el ejemplo.\\
+Por último se generan 8 valores aleatorios de una distribución ZOIP-simplex des\-cri\-ta como $\text{ZOIP}(\mu=0.6, \, \sigma=3, \, p_0=0.2, \, p_1=0.2)$. La función \code{set.seed} tiene como fin garantizar la repetición de los valores aleatorios generados en el ejemplo.\\
 
 \begin{verbatim}
 set.seed(12345)
@@ -506,7 +505,7 @@ Los argumentos de la función \code{RM.ZOIP} son:
 \item \code{formula.mu}: Formula que define los datos para ajustar una distibuci\'{o}n ZOIP, para ello debe tomar el valor de \code{y $\sim$ 1}, donde y es el nombre de la variable a ajustar.
 \item \code{data}: Es el conjunto de datos en formato \code{data.frame} donde debe contener los datos de la variable a ajustar y el nombre debe ser tal cual como est\'{a} en las f\'{o}rmula para el par\'{a}metro $\mu$.
 \item \code{family}: Elecci\'{o}n de la distribuci\'{o}n ZOIP deseada para ajustar, si toma el valor de \code{``R-S''} se utilizar\'{a} la distribuci\'{o}n ZOIP-Beta con parametrizaci\'{o}n  \cite{Stasinopoulos2}, si toma el valor de \code{``F-C''} se utilizar\'{a} la distribuci\'{o}n ZOIP-Beta parametrizaci\'{o}n \cite{Ferrari2}, el valor de \code{``Original''} se utilizar\'{a} la distribuci\'{o}n ZOIP-Beta con parametrizaci\'{o}n clásica, \code{``Simplex''} utilizar\'{a} la distribuci\'{o}n ZOIP-simplex.
-\item \code{optimizer}: Elecci\'{o}n del optimizador, utilizado para encontrar la convergencia de la m\'{a}xima verosimilitud. se puede elegir el valor de \code{``nlminb''} o \code{``optim''}, por defecto \code{``nlminb''}
+\item \code{optimizer}: Elecci\'{o}n del optimizador, utilizado para encontrar la convergencia de la m\'{a}xima verosimilitud. se puede elegir el valor de \code{``nlminb''} o \code{``optim''}, por defecto \code{``nlminb''}.
 \end{itemize}
 
 En el siguiente ejemplo se mostrará el ajuste de una distribuci\'{o}n ZOIP, para ello mostraremos la salida de la funci\'{o}n \code{RM.ZOIP} de $1000$ observaciones simuladas para la distribuci\'{o}n ZOIP-Beta parametrizaci\'{o}n \cite{Stasinopoulos2}.\\
@@ -558,7 +557,7 @@ mod
 
 En el anterior resultado se obtienen varios aspectos importantes de la salida del ajuste de la distribuci\'{o}n y leyendo de arriba hacia abajo, primero que todo nos muestra la distribuci\'{o}n ajustada, luego el valor ajustado para cada par\'{a}metro de la distribuci\'{o}n ZOIP, luego un indicador de convergencia del ajuste, donde 0 indica la convergencia, despu\'{e}s un mensaje sobre la convergencia (resultados heredados de la funci\'{o}n \code{nlimnb}), despu\'{e}s se encuentra el n\'{u}mero de iteraciones que fueron necesarias para que convergiera el ajuste de la distribuci\'{o}n, por \'{u}ltimo se encuentra valor de la log-verosimilitud que nos permitir\'{a} hacer comparaciones entre ajustes de distribuciones.\\ 
 
- Al aplicar a la distribuci\'{o}n ajustada (\code{mod}) la funci\'{o}n \code{summary} se obtiene el siguiente resultado:
+ Al aplicar a la distribuci\'{o}n ajustada (\code{mod}) la funci\'{o}n \code{summary} se obtiene el si\-gui\-en\-te resultado:
 
 \begin{verbatim}
 summary(mod)
@@ -605,9 +604,9 @@ As\'{\i} como la funci\'{o}n \code{summary} puede ser aplicada a un objeto de la
 %En esta sección se muestran varios resultados sobre el ajuste de una distribución ZOIP, primero , y en segunda instancia se ajustó una distribución ZOIP a datos reales sobre la utilización de una tarjeta de crédito de una entidad financiera.
 
 \section{Estudio de simulación}
-En esta sección se realizó un estudio de simulación para observar la convergencia de la estimación de los parámetros de la distribución ZOIP para esto se analizan diferentes aspectos de la capacidad de estimación que tiene el método de máxima verosimilitud sobre los parámetros de la distribución ZOIP. Se generaron muestras de una distribución ZOIP bajo las diferentes distribuciones y parámetrizaciones con tamaños de muestra n de: 5, 10, 15, ..., 500, y se realizaron 1000 réplicas para cada tamaño de muestra, posteriormente se calculó la mediana de cada una de las estimaciones de los parámetros, y así poder analizar la capacidad de convergencia de las metodologías implementadas en la distribución ZOIP y en el paquete \verb|ZOIP|.\\
+En esta sección se realizó un estudio de simulación para observar la convergencia de la estimación de los parámetros de la distribución ZOIP para esto se analizan diferentes aspectos de la capacidad de estimación que tiene el método de máxima verosimilitud sobre los parámetros de la distribución ZOIP. Se generaron muestras de una distribución ZOIP bajo las diferentes distribuciones y parámetrizaciones con tamaños de muestra $n$ de: 5, 10, 15, ..., 500, y se realizaron 1000 réplicas para cada tamaño de muestra, posteriormente se calculó la mediana de cada una de las estimaciones de los parámetros, y así poder analizar la capacidad de convergencia de las metodologías implementadas en la distribución ZOIP y en el paquete \verb|ZOIP|.\\
 
-En el primer escenario del estudio de simulación se generaron los datos de una distribución ZOIP-Beta$(\mu=0.6 ,\sigma=0.2 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Stasinopoulos2}, ZOIP-Beta$(\mu=0.6 , \sigma=24 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Ferrari2}, ZOIP-Beta$(\mu=14.4 , \sigma=9.6 , p_0=0.03 , p_1= 0.05)$, cabe aclarar que las tres parametrizaciones anteriores generan exactamente la misma distribución, esto gracias a las ecuaciones definidas en \eqref{FC_Origin1}, \eqref{FC_Origin2}, \eqref{RS_Origin1} y \eqref{RS_Origin2}, de igual manera se generó la misma cantidad de datos simulados para la distribución ZOIP-simplex$(\mu=0.4 , \sigma=0.2 , p_0=0.03 , p_1= 0.05)$.
+En el primer escenario del estudio de simulación se generaron los datos de una distribución ZOIP-Beta$(\mu=0.6 ,\sigma=0.2 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Stasinopoulos2}, ZOIP-Beta$(\mu=0.6 , \sigma=24 , p_0=0.03 , p_1= 0.05)$ para el caso de la parametrización de \citeasnoun{Ferrari2}, ZOIP-Beta$(\mu=14.4 , \sigma=9.6 , p_0=0.03 , p_1= 0.05)$, cabe aclarar que las tres parametrizaciones anteriores generan exactamente la misma distribución, esto gracias a las ecuaciones definidas en \eqref{FC_Origin1}, \eqref{FC_Origin2}, \eqref{RS_Origin1} y \eqref{RS_Origin2}, de igual ma\-ne\-ra se generó la misma cantidad de datos simulados para la distribución ZOIP-simplex$(\mu=0.4 , \sigma=0.2 , p_0=0.03 , p_1= 0.05)$.
 
 
 \begin{figure}
@@ -622,7 +621,7 @@ En el primer escenario del estudio de simulación se generaron los datos de una d
 
 En la Figura \ref{Simu_1} se presentan las medianas de la estimación de los parámetros para cada tamaño de muestra, de esta figura se observa que independientemente de la distribución y pa\-ra\-me\-tri\-za\-ci\-ón escogida en la distribución ZOIP, todos las estimaciones convergen al valor verdadero del parámetro a medida que aumenta el tamaño de muestra n. En la Figura \ref{Simu_1} se nota que las estimaciones de $\sigma$ cuando son parámetros con significado de dispersión como es en la distribución Beta con parametrización \citeasnoun{Stasinopoulos2} y en la distribución simplex, tienden a dar valores subestimados, por otra parte, en las distribuciones que $\sigma$ tiene significado de forma y precisión tienden a dar valores sobrestimados. Se observa que las estimaciones de los parámetros de inflación a pesar de que son pequeñas dan resultados muy satisfactorios y casi sin variación en su forma de estimación de distribución a distribución.
 
-Como medida global del proceso de estimación se eligió el MAPE (Error porcentual absoluto medio. $((\sum_{i=1}^{n}{|y_i-\hat{y}_i/y_i}|)/n)$) debido a los cambios de escala entre los diferentes parámetros de las diferentes distribuciones y parametrizaciones. Esta media se realizó como un promedio de los MAPES generados por cada uno de los parámetros de la distribución ZOIP en cada tamaño de muestra. En la Figura \ref{Mapes}a se presenta el MAPE para las diferentes distribuciones y parametrizaciones estimadas, se observa como a medida que el tamaño de muestra aumenta, el MAPE va decreciendo rápidamente, aunque des\-pués de un tamaño de muestra de 200, el MAPE decrece de una manera más lenta, además los errores de estimación son muy parecidos entre los 4 casos de simulación, la estimación sobre los parámetros de la distribución ZOIP-simplex tiene un error un poco más grande, pero no es significativo sobre los demás casos.\\
+Como medida global del proceso de estimación se eligió el MAPE (Error por\-cen\-tu\-al absoluto medio. $((\sum_{i=1}^{n}{|y_i-\hat{y}_i/y_i}|)/n)$) debido a los cambios de escala entre los diferentes parámetros de las diferentes distribuciones y parametrizaciones. Esta media se realizó como un promedio de los MAPES generados por cada uno de los parámetros de la distribución ZOIP en cada tamaño de muestra. En la Figura \ref{Mapes}a se presenta el MAPE para las diferentes distribuciones y parametrizaciones estimadas, se observa como a medida que el tamaño de muestra aumenta, el MAPE va decreciendo rápidamente, aunque des\-pués de un tamaño de muestra de 200, el MAPE decrece de una manera más lenta, además los errores de estimación son muy parecidos entre los 4 casos de simulación, la estimación sobre los parámetros de la distribución ZOIP-simplex tiene un error un poco más grande, pero no es significativo sobre los demás casos.\\
  
 En el segundo escenario de simulación se generó el mismo ejercicio de simulación anterior sobre las mismas distribuciones y parametrizaciones, solo que los valores de $p_0$ y $p_1$ cambian por $0.3$ y $0.2$, respectivamente. Dando así que el 50\% de los datos se vean contaminados por ceros y unos, esto para ver si de alguna forma afecta el aumento de la presencia de ceros y unos sobre las estimaciones de los parámetros de la parte continua de la distribución ZOIP.
 
@@ -644,7 +643,7 @@ En la Figura \ref{Simu_2} se presentan las estimaciones de los parámetros de la 
 		\includegraphics[scale=0.42]{Mape_gnrl.eps}	
 		\quad
 		\includegraphics[scale=0.42]{Mape_gnrl_infla.eps}
-		\caption{Mape (Error porcentual absoluto medio) para los dos escenarios de simulación y para distintas parametrizaciones y valores de $n$.}
+		\caption{Mape (Error porcentual absoluto medio) para los dos escenarios de si\-mu\-la\-ci\-ón y para distintas parametrizaciones y valores de $n$.}
 		\label{Mapes}
 	\end{center}
 \end{figure}
@@ -753,7 +752,7 @@ En la Figura \ref{Apli_Aju_ZOIP} se presenta gráficamente el ajuste de la distri
 
 La distribución ZOIP y el paquete \verb|ZOIP| de \proglang{R} permiten ajustar distribuciones para datos provenientes de porcentajes, tasas o proporciones que se encuentren inflados con ceros y/o unos, dicha distribución está compuesta por cuatro parámetros, que son estimados vía máxima verosimilitud y en el cual de acuerdo a los estudios de simulación realizados estos convergen a los valores reales con un tamaño de muestra relativamente pequeño, además se observa como la estimación de los parámetros de la parte continua no se ven afectados por el aumento de la presencia de ceros y unos en los datos, pero sí la estimación de los parámetros de la parte discreta. Por otra parte, se observa cómo el ajuste de la distribución ZOIP-Beta explica el comportamiento de la distribución del porcentaje de utilización de una tarjeta de crédito en un banco.\\
 
-La distribución ZOIP y el paquete \verb|ZOIP| de \proglang{R} permiten de una manera muy versátil utilizar y ajustar diferentes parametrizaciones y distribuciones para datos proporcionales. Además permite Utilizar y ajustar distribuciones para datos proporcionales que se encuentran inflados solo con ceros o solo con unos, de una manera práctica.
+La distribución ZOIP y el paquete \verb|ZOIP| de \proglang{R} permiten de una manera muy versátil utilizar y ajustar diferentes parametrizaciones y distribuciones para datos proporcionales. Además permite utilizar y ajustar distribuciones para datos proporcionales que se encuentran inflados solo con ceros o solo con unos, de una manera práctica.
 
 
 %\begin{flushright}

@@ -20,7 +20,7 @@ max(y_sim)
 
 plot(density(y_i,cut=0),xlab='Porcentaje de utilización tdc', main='Ajuste distribución \n ZOIP-Beta',ylim=c(0,4.5),las=2,ylab='Densidad')
 lines(density(y_sim,cut=0),col='blue',lty=2)
-legend("topright", legend = c("Densidad Empírica", "Desidad Ajustada"),lty=1:2,col = c('black', 'blue'))
+legend("topright",bty='n', legend = c("Densidad Empírica", "Desidad Ajustada"),lty=1:2,col = c('black', 'blue'))
 
 mu=0.5741
 sigma=4885.4370
@@ -36,6 +36,6 @@ max(y_sim)
 aux<-density(y_sim)
 plot(density(y_i,cut=0),xlab='Porcentaje de utilización tdc', main='Ajuste distribución \n ZOIP-Simplex',ylim=c(0,4.5),las=2,ylab='Densidad')
 lines(density(y_sim,cut=0),col='blue',lty=2)
-legend("topright", legend = c("Densidad Empírica", "Desidad Ajustada"),lty=1:2,col = c('black', 'blue'))
+legend("topright",bty='n', legend = c("Densidad Empírica", "Desidad Ajustada"),lty=1:2,col = c('black', 'blue'))
 
 #################
